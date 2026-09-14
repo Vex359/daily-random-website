@@ -1,0 +1,15 @@
+{
+  "name": "daily-random-website",
+  "version": "1.0.0",
+  "description": "A daily website showcasing interesting content from across the internet",
+  "scripts": {
+    "test": "pytest",
+    "lint": "ruff check src/ tests/",
+    "format": "ruff format src/ tests/",
+    "playwright:install": "playwright install chromium"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.40.0"
+  },
+  "private": true
+}
