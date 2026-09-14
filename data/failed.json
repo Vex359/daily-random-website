@@ -1,1 +1,12 @@
-[]
+[
+  {
+    "url": "source://github",
+    "source": "github",
+    "error": "Rate limit exhausted. Try again in 51s.",
+    "error_type": "unknown",
+    "timestamp": "2026-09-14T19:21:56.623411+00:00",
+    "details": {
+      "phase": "collection"
+    }
+  }
+]
