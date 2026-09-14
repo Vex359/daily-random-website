@@ -15,5 +15,22 @@
     "why_interesting": "Curated for your interest",
     "discovered_at": "2026-09-14T19:22:18.149652+00:00",
     "published_at": "2026-09-14T19:22:18.149652+00:00"
+  },
+  {
+    "id": "367aa923-362b-4595-83d5-1bad467e916a",
+    "url": "https://posthog.com",
+    "canonical_url": "https://posthog.com",
+    "domain": "posthog.com",
+    "title": "posthog",
+    "description": ":hedgehog: PostHog is the leading platform for building self-driving products. Our developer tools – AI observability, analytics, session replay, flags, experiments, error tracking, logs, and more – capture all the context agents need to diagnose problems, uncover opportunities, and ship fixes. Steer it all from Slack, web, desktop, or the MCP.",
+    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "category": "Uncategorized",
+    "source": "github",
+    "source_type": "interactive",
+    "score": 77,
+    "screenshot_path": "screenshots/posthog-com.webp",
+    "why_interesting": "Curated for your interest",
+    "discovered_at": "2026-09-14T19:32:08.345538+00:00",
+    "published_at": "2026-09-14T19:32:08.345538+00:00"
   }
 ]
