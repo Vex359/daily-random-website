@@ -1,8 +1,102 @@
+# =============================================================================
+# Daily Random Website — Netlify Configuration
+# =============================================================================
+# Static site deployed from dist/ directory.
+# No build step required; the Python pipeline generates files locally.
+
+# -----------------------------------------------------------------------------
+# Build Settings
+# -----------------------------------------------------------------------------
 [build]
   command = "echo 'Static site - no build needed'"
   publish = "dist"
 
+# -----------------------------------------------------------------------------
+# Redirects
+# -----------------------------------------------------------------------------
+
+# SPA fallback — serve index.html for all unmatched routes
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+
+# -----------------------------------------------------------------------------
+# Headers — Security
+# -----------------------------------------------------------------------------
+# Applied to ALL responses
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-XSS-Protection = "1; mode=block"
+
+# -----------------------------------------------------------------------------
+# Headers — Static Assets (long cache)
+# -----------------------------------------------------------------------------
+# CSS, JS, images, fonts — immutable hashed filenames, safe to cache aggressively
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# HTML files — short cache, always revalidate for fresh content
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# -----------------------------------------------------------------------------
+# Headers — Additional static asset patterns (css/js in subdirs)
+# -----------------------------------------------------------------------------
+
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# =============================================================================
+# Environment Variables (configured in Netlify UI, NOT here)
+# =============================================================================
+#
+# This project does NOT require environment variables for basic deployment.
+# The site is a pre-built static directory — no server-side logic runs on Netlify.
+#
+# If serverless functions are added later, set these in the Netlify dashboard:
+#
+#   Site settings → Environment variables:
+#
+#   KEY                     PURPOSE
+#   ─────────────────────── ──────────────────────────────────────────
+#   NETLIFY_AUTH_TOKEN      Personal access token for CLI deploys
+#   NETLIFY_SITE_ID        Unique site identifier (auto-set by Netlify)
+#   API_KEY_*               Any third-party API keys used by functions
+#
+# SECURITY: Never commit actual token values to this file or any tracked file.
+# Use Netlify's UI or encrypted GitHub Secrets instead.
+# =============================================================================
