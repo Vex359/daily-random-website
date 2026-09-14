@@ -4,6 +4,16 @@ on:
   schedule:
     - cron: '0 12 */2 * *'  # Noon UTC every 2 days
   workflow_dispatch:          # Manual trigger
+  push:
+    branches: [ master, main ]
+    paths-ignore:
+      - 'data/**'
+      - 'screenshots/**'
+      - 'dist/**'
+      - 'README.md'
+
+permissions:
+  contents: write
 
 # Prevent concurrent runs on the same branch
 concurrency:
