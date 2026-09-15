@@ -93,7 +93,7 @@ jobs:
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-        run: npx netlify-cli deploy --prod --dir=dist
+        run: npx netlify-cli deploy --prod --dir=dist --site "$NETLIFY_SITE_ID"
 
       # ── Error summary (always runs) ──────────────────────────────────
       - name: Report pipeline status
