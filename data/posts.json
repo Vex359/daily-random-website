@@ -32,5 +32,22 @@
     "why_interesting": "Curated for your interest",
     "discovered_at": "2026-09-14T19:32:08.345538+00:00",
     "published_at": "2026-09-14T19:32:08.345538+00:00"
+  },
+  {
+    "id": "e3390ec0-8dbd-4b52-8d04-f5ada0500a7d",
+    "url": "https://poltora.dev/redis",
+    "canonical_url": "https://poltora.dev/redis",
+    "domain": "poltora.dev",
+    "title": "Show HN: Redis City – Explore how Redis works in an interactive 3D model",
+    "description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "category": "Uncategorized",
+    "source": "hackernews",
+    "source_type": "show_hn",
+    "score": 81,
+    "screenshot_path": "screenshots/poltora-dev.webp",
+    "why_interesting": "Curated for your interest",
+    "discovered_at": "2026-09-15T05:14:07.773329+00:00",
+    "published_at": "2026-09-15T05:14:07.773329+00:00"
   }
 ]
