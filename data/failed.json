@@ -18,5 +18,25 @@
     "details": {
       "phase": "enrich_and_publish"
     }
+  },
+  {
+    "url": "source://github",
+    "source": "github",
+    "error": "Rate limit exhausted. Try again in 49s.",
+    "error_type": "unknown",
+    "timestamp": "2026-09-15T06:19:16.158070+00:00",
+    "details": {
+      "phase": "collection"
+    }
+  },
+  {
+    "url": "https://poltora.dev/redis",
+    "source": "hackernews",
+    "error": "Domain already exists: poltora.dev",
+    "error_type": "permanent",
+    "timestamp": "2026-09-15T06:20:07.651782+00:00",
+    "details": {
+      "phase": "enrich_and_publish"
+    }
   }
 ]

@@ -98,5 +98,27 @@
     "why_interesting": "It lets developers create beautiful, real‑time charts with minimal code, turning raw data into eye‑catching stories.",
     "discovered_at": "2026-09-15T06:08:35.603869+00:00",
     "published_at": "2026-09-15T06:08:35.603869+00:00"
+  },
+  {
+    "id": "daa3db7e-0f0b-493d-b82c-084202888e10",
+    "url": "https://gally.net/temp/20260914pelican-alternatives/index.html",
+    "canonical_url": "https://gally.net/temp/20260914pelican-alternatives",
+    "domain": "gally.net",
+    "title": "Pelican-bicycle alternatives",
+    "clean_title": "Pelican-bicycle alternatives",
+    "raw_title": "Show HN: Pelican-bicycle alternatives",
+    "description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "category": "Tools",
+    "tags": [
+      "Tools"
+    ],
+    "source": "hackernews",
+    "source_type": "show_hn",
+    "score": 69,
+    "screenshot_path": "screenshots/gally-net.webp",
+    "why_interesting": "Curated for your interest",
+    "discovered_at": "2026-09-15T06:20:18.701891+00:00",
+    "published_at": "2026-09-15T06:20:18.701891+00:00"
   }
 ]
