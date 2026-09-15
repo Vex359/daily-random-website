@@ -60,6 +60,10 @@ class StorageManager:
         self._default_keep_count = default_keep_count
         self._posts: list[dict[str, Any]] = self._load_posts()
         self._seen_domains: set[str] = set(self._load_seen_domains())
+        for p in self._posts:
+            d = p.get("domain")
+            if d:
+                self._seen_domains.add(d)
 
     # ------------------------------------------------------------------
     # Public API
