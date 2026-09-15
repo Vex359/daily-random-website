@@ -169,15 +169,36 @@ class ScreenshotCapture:
         self._auto_scroll(page)  # type: ignore[arg-type]
 
         # Let fonts and remaining images settle
-        page.wait_for_timeout(int(WAIT_AFTER_LOAD_S * 1000))  # type: ignore[union-attr]
+        try:
+            page.wait_for_timeout(int(WAIT_AFTER_LOAD_S * 1000))  # type: ignore[union-attr]
+        except Exception:
+            pass
 
         # Capture viewport (NOT full page)
-        page.screenshot(  # type: ignore[union-attr]
-            path=str(output),
-            type="webp",
-            quality=DEFAULT_QUALITY,
-            full_page=False,
-        )
+        try:
+            page.screenshot(  # type: ignore[union-attr]
+                path=str(output),
+                type="webp",
+                quality=DEFAULT_QUALITY,
+                full_page=False,
+            )
+        except PlaywrightError as pe:
+            if "expected one of (png|jpeg)" in str(pe) or "type" in str(pe):
+                # Real Playwright only accepts png or jpeg, so capture as png and convert via PIL
+                png_path = output.with_suffix(".tmp.png")
+                try:
+                    page.screenshot(  # type: ignore[union-attr]
+                        path=str(png_path),
+                        type="png",
+                        full_page=False,
+                    )
+                    with Image.open(png_path) as img:
+                        img.convert("RGB").save(str(output), format="WEBP", quality=DEFAULT_QUALITY)
+                finally:
+                    if png_path.exists():
+                        png_path.unlink(missing_ok=True)
+            else:
+                raise
 
         # Resize if wider than MAX_WIDTH_PX
         self._resize_if_needed(output)
@@ -187,26 +208,25 @@ class ScreenshotCapture:
 
     def _auto_scroll(self, page: object) -> None:
         """Scroll the page in increments to trigger lazy loading."""
-        page.evaluate(  # type: ignore[union-attr]
-            """
-            async () => {
-                const step = arguments[0];
-                const pause = arguments[1];
-                const delay = ms => new Promise(r => setTimeout(r, ms));
-                let pos = 0;
-                const maxScroll = document.body.scrollHeight;
-                while (pos < maxScroll) {
-                    pos += step;
-                    window.scrollTo(0, pos);
-                    await delay(pause);
+        try:
+            page.evaluate(  # type: ignore[union-attr]
+                """
+                async ([step, pause]) => {
+                    const delay = ms => new Promise(r => setTimeout(r, ms));
+                    let pos = 0;
+                    const maxScroll = Math.min(document.body ? document.body.scrollHeight : 2000, 3000);
+                    while (pos < maxScroll) {
+                        pos += step;
+                        window.scrollTo(0, pos);
+                        await delay(pause);
+                    }
+                    window.scrollTo(0, 0);
                 }
-                // Scroll back to top for a clean capture
-                window.scrollTo(0, 0);
-            }
-            """,
-            SCROLL_STEP_PX,
-            SCROLL_PAUSE_MS,
-        )
+                """,
+                [SCROLL_STEP_PX, SCROLL_PAUSE_MS],
+            )
+        except Exception as exc:
+            logger.debug("Auto-scroll failed: %s", exc)
 
     # ── Resize / optimise ────────────────────────────────────────────────
 

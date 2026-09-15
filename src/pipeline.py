@@ -24,7 +24,13 @@ from typing import Any
 import requests
 from bs4 import BeautifulSoup
 
-from src.ai.generator import FALLBACK_DESCRIPTION, AIDescriptionGenerator
+from src.ai.generator import (
+    FALLBACK_DESCRIPTION,
+    AIDescriptionGenerator,
+    clean_website_name,
+    categorize_candidate,
+    generate_tags,
+)
 from src.collectors.awesome_lists import AwesomeListsCollector
 from src.collectors.github_collector import GitHubCollector
 from src.collectors.hackernews import HackerNewsCollector
@@ -347,21 +353,29 @@ class ContentPipeline:
         # 2. AI Description Generation
         ai_desc = FALLBACK_DESCRIPTION
         why_interesting = "An intriguing discovery from the web."
-        category = candidate.get("category", "Interactive")
+        category = candidate.get("category") or categorize_candidate(candidate)
+        if category == "Uncategorized":
+            category = categorize_candidate(candidate)
+        clean_title = clean_website_name(candidate.get("title") or domain, domain)
+        tags = candidate.get("tags") or generate_tags(candidate, category)
 
         if not dry_run:
             try:
                 ai_result = self.ai.generate_description(candidate)
                 ai_desc = ai_result.get("description", FALLBACK_DESCRIPTION)
-                if ai_result.get("category"):
+                if ai_result.get("clean_title"):
+                    clean_title = clean_website_name(ai_result["clean_title"], domain)
+                if ai_result.get("category") and ai_result["category"] != "Uncategorized":
                     category = ai_result["category"]
+                if ai_result.get("tags"):
+                    tags = ai_result["tags"]
                 if ai_result.get("why_interesting"):
                     why_interesting = ai_result["why_interesting"]
             except Exception as exc:  # noqa: BLE001
                 logger.warning("AI description generation failed for %s: %s. Using fallback.", url, exc)
         else:
             ai_desc = (
-                f"[DRY-RUN] {candidate.get('title', domain)} is an interesting find discovered via "
+                f"[DRY-RUN] {clean_title} is an interesting find discovered via "
                 f"{candidate.get('source', 'curation')}. Check out this interactive experience!"
             )
 
@@ -371,10 +385,13 @@ class ContentPipeline:
             "url": url,
             "canonical_url": candidate.get("canonical_url", url),
             "domain": domain,
-            "title": candidate.get("title") or domain,
+            "title": clean_title,
+            "clean_title": clean_title,
+            "raw_title": candidate.get("title") or domain,
             "description": candidate.get("description") or ai_desc,
             "ai_description": ai_desc,
             "category": category,
+            "tags": tags,
             "source": candidate.get("source", "hackernews"),
             "source_type": candidate.get("source_type", ""),
             "score": int(candidate.get("score", 50)),
@@ -412,7 +429,7 @@ class ContentPipeline:
         if self.screenshots_dir.exists():
             for img in self.screenshots_dir.glob("*.webp"):
                 dest = dist_screenshots / img.name
-                if not dest.exists() or img.stat().st_mtime > dest.stat().st_mtime:
+                if not dest.exists() or dest.stat().st_size != img.stat().st_size or img.stat().st_mtime > dest.stat().st_mtime:
                     try:
                         shutil.copy2(img, dest)
                     except OSError as exc:

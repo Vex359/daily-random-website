@@ -24,6 +24,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+from src.ai.generator import clean_website_name
+
 logger = logging.getLogger(__name__)
 
 # ---------------------------------------------------------------------------
@@ -57,6 +59,21 @@ CATEGORY_SLUGS: dict[str, str] = {
     "Educational": "educational",
 }
 
+POPULAR_TAGS: tuple[str, ...] = (
+    "3D",
+    "AI",
+    "Analytics",
+    "Audio",
+    "Database",
+    "Design",
+    "Developer Tools",
+    "Open Source",
+    "Productivity",
+    "Simulation",
+    "Voice AI",
+    "Visualization",
+)
+
 
 # ---------------------------------------------------------------------------
 # HTML helpers (escape, no frameworks)
@@ -78,23 +95,45 @@ def _esc_display(text: str) -> str:
 
 def _render_post_card(post: dict[str, Any]) -> str:
     """Render a single post as an Instagram-style card."""
-    title = _esc_display(post.get("title") or "Untitled")
+    raw_title = post.get("clean_title") or post.get("title")
+    domain = str(post.get("domain") or "")
+    if raw_title is None or raw_title == "":
+        title = "Untitled"
+    else:
+        title = _esc_display(clean_website_name(raw_title, domain))
     description = _esc_display(post.get("ai_description") or post.get("description") or "")
     category = _esc_display(post.get("category") or "Uncategorized")
     source = _esc_display(post.get("source") or "")
     url = _esc(post.get("url") or "#")
-    domain = _esc_display(post.get("domain") or "")
     screenshot = _esc(post.get("screenshot_path") or SCREENSHOT_PLACEHOLDER)
-    category_lower = CATEGORY_SLUGS.get(post.get("category", ""), "uncategorized")
+    cat_str = str(post.get("category") or "")
+    category_lower = CATEGORY_SLUGS.get(cat_str, cat_str.lower().replace(" ", "-"))
     alt_text = _esc(f"Screenshot of {domain or title}")
 
     source_label = _source_label(source)
 
-    return f"""<article class="post-card" data-category="{category_lower}">
+    tags = post.get("tags") or []
+    if isinstance(tags, list):
+        tags_lower_list = [str(t).lower().replace(" ", "-") for t in tags if t]
+    else:
+        tags_lower_list = []
+    data_tags = _esc(",".join(tags_lower_list))
+
+    tags_html = ""
+    if tags and isinstance(tags, list):
+        tag_spans = [
+            f'<span class="post-tag-pill" data-tag-slug="{_esc(str(t).lower().replace(" ", "-"))}">#{_esc_display(str(t))}</span>'
+            for t in tags[:4] if t
+        ]
+        if tag_spans:
+            tags_html = f'<div class="post-tags-list">{" ".join(tag_spans)}</div>'
+
+    return f"""<article class="post-card" data-category="{category_lower}" data-tags="{data_tags}">
       <img src="{screenshot}" alt="{alt_text}" loading="lazy">
       <div class="card-content">
-        <h3 class="post-title">{title}</h3>
+        <h3 class="post-title"><strong>{title}</strong></h3>
         <p class="post-description">{description}</p>
+        {tags_html}
         <div class="post-meta">
           <span class="post-category">{category}</span>
           <span class="post-source">via {source_label}</span>
@@ -252,17 +291,61 @@ def _generate_index_page(posts: list[dict[str, Any]]) -> str:
 {_site_footer()}"""
 
 
+def _render_filter_dropdown(posts: list[dict[str, Any]], active: str = "all") -> str:
+    """Render a clean <select> dropdown containing all categories and tags."""
+    lines = ['      <div class="filter-dropdown-wrap">']
+    lines.append('        <label for="category-select" class="filter-label">🏷️ Filter by Tag / Category:</label>')
+    lines.append('        <select id="category-select" class="filter-select">')
+    lines.append('          <option value="all">🌟 All Discoveries</option>')
+    lines.append('          <optgroup label="Categories">')
+    seen_slugs = set()
+    for cat in VALID_CATEGORIES:
+        slug = CATEGORY_SLUGS[cat]
+        if slug not in seen_slugs:
+            seen_slugs.add(slug)
+            sel = ' selected="selected"' if slug == active else ""
+            lines.append(f'            <option value="{slug}"{sel}>{_esc_display(cat)}</option>')
+    lines.append('          </optgroup>')
+
+    # Unique tags from posts + popular topics
+    tag_options = set(POPULAR_TAGS)
+    for p in posts:
+        tags = p.get("tags")
+        if isinstance(tags, list):
+            for t in tags:
+                if t and t not in VALID_CATEGORIES:
+                    tag_options.add(str(t))
+
+    if tag_options:
+        lines.append('          <optgroup label="Topic Tags">')
+        for t in sorted(list(tag_options)):
+            slug = str(t).lower().replace(" ", "-")
+            sel = ' selected="selected"' if slug == active else ""
+            lines.append(f'            <option value="{slug}"{sel}>#{_esc_display(str(t))}</option>')
+        lines.append('          </optgroup>')
+
+    lines.append('        </select>')
+    lines.append('      </div>')
+    return "\n".join(lines)
+
+
 def _generate_archive_page(posts: list[dict[str, Any]]) -> str:
     """Generate the archive page HTML."""
     sorted_posts = sorted(
         posts, key=lambda p: p.get("discovered_at", ""), reverse=True
     )
 
+    dropdown_html = _render_filter_dropdown(sorted_posts, "all")
+    buttons_html = _render_filter_buttons("all")
+
     if sorted_posts:
         cards_html = "\n".join(_render_post_card(p) for p in sorted_posts)
         posts_section = f"""    <section class="archive-section">
       <div class="posts-grid">
 {cards_html}
+      </div>
+      <div id="filter-empty-state" class="empty-state" style="display:none;">
+        <p>No discoveries match this tag yet. Check back soon!</p>
       </div>
     </section>"""
     else:
@@ -277,9 +360,12 @@ def _generate_archive_page(posts: list[dict[str, Any]]) -> str:
 {_site_header("archive")}
   <main class="site-main">
     <section class="filter-bar">
-      <h2>All Discoveries</h2>
+      <div class="filter-header">
+        <h2>All Discoveries</h2>
+{dropdown_html}
+      </div>
       <div class="filter-buttons">
-{_render_filter_buttons("all")}
+{buttons_html}
       </div>
     </section>
 {posts_section}
@@ -549,11 +635,51 @@ img { display: block; max-width: 100%; height: auto; }
 /* --- Filter bar --- */
 .filter-bar {
   display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.filter-header {
+  display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 1rem;
-  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.filter-dropdown-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.filter-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.filter-select {
+  padding: 0.45rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+  font-family: var(--font-sans);
+  box-shadow: var(--shadow-sm);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.filter-select:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
 }
 
 .filter-buttons {
@@ -582,6 +708,40 @@ img { display: block; max-width: 100%; height: auto; }
   background: var(--color-primary);
   color: #fff;
   border-color: var(--color-primary);
+}
+
+.post-title {
+  font-size: 1.15rem;
+  line-height: 1.35;
+}
+
+.post-title strong {
+  font-weight: 800;
+  color: var(--color-text);
+}
+
+.post-tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: 0.2rem 0;
+}
+
+.post-tag-pill {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #4338ca;
+  background: #eef2ff;
+  padding: 0.15rem 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.post-tag-pill:hover {
+  background: #e0e7ff;
+  color: #3730a3;
 }
 
 /* --- Post detail --- */
@@ -656,6 +816,7 @@ img { display: block; max-width: 100%; height: auto; }
   .posts-grid { grid-template-columns: 1fr; }
   .hero-section .post-card img { aspect-ratio: 16/9; }
   .filter-bar { flex-direction: column; align-items: flex-start; }
+  .filter-header { flex-direction: column; align-items: flex-start; }
   .post-detail-title { font-size: 1.5rem; }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -664,29 +825,76 @@ img { display: block; max-width: 100%; height: auto; }
 """
 
 _JS = """\
-// Category filter for archive and category pages
+// Category & Tag filter for archive and category pages
 document.addEventListener('DOMContentLoaded', function() {
   var buttons = document.querySelectorAll('.filter-btn');
+  var dropdown = document.getElementById('category-select');
   var cards = document.querySelectorAll('.post-card');
 
-  if (!buttons.length || !cards.length) return;
+  if (!cards.length) return;
+
+  function applyFilter(filter) {
+    if (!filter) filter = 'all';
+    filter = filter.toLowerCase();
+
+    // Update active button state
+    buttons.forEach(function(b) {
+      if (b.getAttribute('data-filter') === filter) {
+        b.classList.add('active');
+      } else {
+        b.classList.remove('active');
+      }
+    });
+
+    // Update dropdown selection
+    if (dropdown) {
+      for (var i = 0; i < dropdown.options.length; i++) {
+        if (dropdown.options[i].value.toLowerCase() === filter) {
+          dropdown.selectedIndex = i;
+          break;
+        }
+      }
+    }
+
+    // Filter cards
+    var visible = 0;
+    cards.forEach(function(card) {
+      var cat = (card.getAttribute('data-category') || '').toLowerCase();
+      var rawTags = (card.getAttribute('data-tags') || '').toLowerCase();
+      var tagsList = rawTags ? rawTags.split(',') : [];
+      var matches = (filter === 'all') || (cat === filter) || (tagsList.indexOf(filter) !== -1);
+      if (matches) {
+        card.style.display = '';
+        visible++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    var empty = document.getElementById('filter-empty-state');
+    if (empty) {
+      empty.style.display = visible === 0 ? 'block' : 'none';
+    }
+  }
 
   buttons.forEach(function(btn) {
     btn.addEventListener('click', function() {
-      var filter = this.getAttribute('data-filter');
+      applyFilter(this.getAttribute('data-filter'));
+    });
+  });
 
-      // Update active button
-      buttons.forEach(function(b) { b.classList.remove('active'); });
-      this.classList.add('active');
+  if (dropdown) {
+    dropdown.addEventListener('change', function() {
+      applyFilter(this.value);
+    });
+  }
 
-      // Filter cards
-      cards.forEach(function(card) {
-        if (filter === 'all' || card.getAttribute('data-category') === filter) {
-          card.style.display = '';
-        } else {
-          card.style.display = 'none';
-        }
-      });
+  var tagPills = document.querySelectorAll('.post-tag-pill');
+  tagPills.forEach(function(pill) {
+    pill.addEventListener('click', function(e) {
+      e.preventDefault();
+      var tag = this.getAttribute('data-tag-slug');
+      if (tag) applyFilter(tag);
     });
   });
 });

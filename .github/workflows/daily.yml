@@ -53,7 +53,7 @@ jobs:
         id: pipeline
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-        run: python -m src.main --limit 1
+        run: python -m src.main --limit 2
 
       # ── Commit changes ───────────────────────────────────────────────
       - name: Commit discovered post
@@ -70,20 +70,20 @@ jobs:
             echo "No changes to commit — skipping."
             echo "committed=false" >> "$GITHUB_OUTPUT"
           else
-            POST_TITLE=$(python -c "
+            POST_TITLES=$(python -c "
           import json
           try:
               with open('data/posts.json') as f:
                   posts = json.load(f)
-              print(posts[-1].get('title', 'Unknown') if posts else 'No posts')
+              print(', '.join([p.get('title', 'Unknown') for p in posts[-2:]]) if posts else 'No posts')
           except Exception:
               print('Unknown')
           ")
 
-            git commit -m "Discover: ${POST_TITLE}"
+            git commit -m "Discover: ${POST_TITLES}"
             git push
             echo "committed=true" >> "$GITHUB_OUTPUT"
-            echo "### Committed: Discover: ${POST_TITLE}" >> "$GITHUB_STEP_SUMMARY"
+            echo "### Committed: Discover: ${POST_TITLES}" >> "$GITHUB_STEP_SUMMARY"
           fi
 
       # ── Deploy to Netlify ────────────────────────────────────────────

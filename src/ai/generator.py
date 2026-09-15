@@ -52,6 +52,119 @@ FALLBACK_DESCRIPTION = (
     "This curated pick stands out from the noise. Check it out!"
 )
 
+
+# ---------------------------------------------------------------------------
+# Clean name & Categorization helpers
+# ---------------------------------------------------------------------------
+
+def clean_website_name(title: str, domain: str = "") -> str:
+    """Extract a concise website/project brand name (1-4 words)."""
+    if not title or title.strip().lower() in ("untitled", "no title", "unknown"):
+        if domain:
+            cleaned_dom = domain.replace("www.", "").split(":")[0]
+            parts = cleaned_dom.split(".")
+            brand = parts[0] if parts[0] not in ("com", "org", "net", "io", "dev") else (parts[-2] if len(parts) > 1 else parts[0])
+            return brand.capitalize()
+        return "Featured Site"
+
+    t = title.strip()
+    # Strip common prefixes
+    prefixes = [
+        "show hn:", "ask hn:", "tell hn:", "launch hn:",
+        "showcase:", "project:", "announcing", "introducing"
+    ]
+    for p in prefixes:
+        if t.lower().startswith(p):
+            t = t[len(p):].strip()
+            t = t.lstrip("-–—: ").strip()
+
+    # Split by common title separators
+    for sep in [" – ", " — ", " - ", " | ", " :: ", " : ", " · ", " • "]:
+        if sep in t:
+            candidate_part = t.split(sep)[0].strip()
+            word_count = len(candidate_part.split())
+            if 1 <= word_count <= 4 and len(candidate_part) <= 30:
+                t = candidate_part
+                break
+
+    words = t.split()
+    if len(words) > 4:
+        if domain:
+            dom_brand = domain.replace("www.", "").split(".")[0].lower()
+            for w in words:
+                if dom_brand in w.lower():
+                    return w.strip(".,;:\"'()")
+        return " ".join(words[:4])
+
+    return t
+
+
+def categorize_candidate(candidate: dict[str, Any]) -> str:
+    """Intelligently assign a category based on candidate metadata keywords."""
+    text = " ".join([
+        str(candidate.get("title") or ""),
+        str(candidate.get("description") or ""),
+        str(candidate.get("why_interesting") or ""),
+        str(candidate.get("url") or ""),
+        " ".join(candidate.get("headings") or []) if isinstance(candidate.get("headings"), list) else "",
+    ]).lower()
+
+    if any(k in text for k in ["3d", "webgl", "threejs", "three.js", "shader", "canvas", "opengl"]):
+        return "3D & Graphics"
+    if any(k in text for k in ["voice", "tts", "asr", "audio", "speech", "sound", "music", "podcast"]):
+        return "Audio & Voice"
+    if any(k in text for k in ["game", "play", "puzzle", "arcade", "simulator", "quest"]):
+        return "Games"
+    if any(k in text for k in ["ai", "llm", "gpt", "neural", "deep learning", "machine learning", "model", "qwen"]):
+        return "AI & ML"
+    if any(k in text for k in ["developer", "code", "github", "git", "api", "database", "redis", "sdk", "cli", "telemetry", "observability", "analytics"]):
+        return "Developer Tools"
+    if any(k in text for k in ["art", "generative", "creative", "design", "gallery", "drawing", "illustration"]):
+        return "Art & Design"
+    if any(k in text for k in ["learn", "teach", "history", "wikipedia", "education", "explorable", "guide"]):
+        return "Educational"
+    if any(k in text for k in ["weird", "strange", "bizarre", "fun", "useless", "random", "novelty"]):
+        return "Weird & Fun"
+    if any(k in text for k in ["tool", "utility", "converter", "calculator"]):
+        return "Tools"
+    if any(k in text for k in ["productivity", "workspace", "notes", "task"]):
+        return "Productivity"
+
+    return candidate.get("category") or "Interactive"
+
+
+def generate_tags(candidate: dict[str, Any], category: str = "") -> list[str]:
+    """Generate 2-4 topical keyword tags for a candidate."""
+    tags: list[str] = []
+    if category and category != "Uncategorized":
+        tags.append(category)
+
+    text = " ".join([
+        str(candidate.get("title") or ""),
+        str(candidate.get("description") or ""),
+        str(candidate.get("url") or ""),
+    ]).lower()
+
+    keywords_map = [
+        ("3d", "3D"), ("redis", "Redis"), ("database", "Database"),
+        ("ai", "AI"), ("voice", "Voice"), ("tts", "TTS"),
+        ("analytics", "Analytics"), ("open source", "Open Source"),
+        ("developer", "Dev Tools"), ("interactive", "Interactive"),
+        ("game", "Game"), ("webgl", "WebGL"), ("design", "Design"),
+        ("music", "Music"), ("simulation", "Simulation"),
+    ]
+
+    for kw, tag_label in keywords_map:
+        if kw in text and tag_label not in tags:
+            tags.append(tag_label)
+        if len(tags) >= 4:
+            break
+
+    if not tags:
+        tags = ["Web", "Featured"]
+    return tags
+
+
 # ---------------------------------------------------------------------------
 # Custom exceptions
 # ---------------------------------------------------------------------------
@@ -128,8 +241,14 @@ class AIDescriptionGenerator:
             raw = self._call_api(messages)
             result = self._parse_ai_response(raw, candidate)
             return result
-        except AIGeneratorError:
-            # Logged in _call_api; return fallback
+        except AIGeneratorError as exc:
+            # If openrouter/free gave a moderation-only response, try backup model
+            if "Moderation-only" in str(exc):
+                try:
+                    raw = self._call_api(messages, model_override="nex-agi/nex-n2.5-pro:free")
+                    return self._parse_ai_response(raw, candidate)
+                except Exception:
+                    pass
             return self._fallback_output(candidate)
 
     def generate_batch(
@@ -243,7 +362,7 @@ class AIDescriptionGenerator:
     # Internal: API calls
     # ------------------------------------------------------------------
 
-    def _call_api(self, messages: list[dict[str, str]]) -> str:
+    def _call_api(self, messages: list[dict[str, str]], model_override: str | None = None) -> str:
         """Call the OpenRouter chat completions API.
 
         Retries once on rate limit (HTTP 429), waiting 60 seconds.
@@ -260,11 +379,12 @@ class AIDescriptionGenerator:
             "X-Title": "Daily Random Website",
         }
 
+        model = model_override or self._model
         payload = {
-            "model": self._model,
+            "model": model,
             "messages": messages,
-            "max_tokens": 256,
-            "temperature": 0.7,
+            "max_tokens": 300,
+            "temperature": 0.5,
         }
 
         try:
@@ -318,7 +438,10 @@ class AIDescriptionGenerator:
             content = data["choices"][0]["message"]["content"]
             if not content:
                 raise AIGeneratorError("Empty response from OpenRouter")
-            return content.strip()
+            cleaned = content.strip()
+            if cleaned in ("User Safety: safe", "safe", "User Safety: unsafe"):
+                raise AIGeneratorError(f"Moderation-only response from model: {cleaned}")
+            return cleaned
         except (KeyError, IndexError) as exc:
             logger.error("Unexpected response structure: %s", data)
             raise AIGeneratorError(
@@ -363,8 +486,14 @@ class AIDescriptionGenerator:
             "Generate a short Instagram-style description for this website.\n\n"
             + "\n".join(parts)
             + "\n\n"
+            "Requirements:\n"
+            "1. clean_title: ONLY the clean website/brand name (1-3 words max, e.g. 'Redis City', 'PostHog'). No subtitles or slogans.\n"
+            "2. description: Exciting 2-sentence Instagram-style hook about what users can see or do on this site.\n"
+            "3. category: Choose ONE from [Interactive, Tools, Games, Art, Educational, Developer Tools, AI & ML, 3D & Graphics, Audio & Voice, Utilities, Weird & Fun].\n"
+            "4. tags: Array of 2-4 lowercase keyword strings.\n"
+            "5. why_interesting: 1 crisp sentence explaining what makes it cool.\n\n"
             "Respond with ONLY valid JSON in this exact format:\n"
-            '{"description": "...", "category": "...", "why_interesting": "..."}'
+            '{"clean_title": "...", "description": "...", "category": "...", "tags": ["..."], "why_interesting": "..."}'
         )
         return prompt
 
@@ -409,9 +538,13 @@ class AIDescriptionGenerator:
             return self._fallback_output(candidate)
 
         # Ensure required keys exist with defaults
+        clean_name = clean_website_name(result.get("clean_title") or candidate.get("title") or "", candidate.get("domain", ""))
+        result["clean_title"] = clean_name
         result.setdefault("description", FALLBACK_DESCRIPTION)
         result.setdefault("category", "Uncategorized")
         result.setdefault("why_interesting", "Curated for your interest")
+        if "tags" not in result or not isinstance(result.get("tags"), list):
+            result["tags"] = generate_tags(candidate, result.get("category", ""))
 
         # Validate
         validation = self.validate_output(result)
