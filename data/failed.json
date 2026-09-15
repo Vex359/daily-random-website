@@ -8,5 +8,15 @@
     "details": {
       "phase": "collection"
     }
+  },
+  {
+    "url": "https://poltora.dev/redis",
+    "source": "hackernews",
+    "error": "Domain already exists: poltora.dev",
+    "error_type": "permanent",
+    "timestamp": "2026-09-15T06:08:21.128596+00:00",
+    "details": {
+      "phase": "enrich_and_publish"
+    }
   }
 ]
