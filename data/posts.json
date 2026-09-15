@@ -120,5 +120,52 @@
     "why_interesting": "Curated for your interest",
     "discovered_at": "2026-09-15T06:20:18.701891+00:00",
     "published_at": "2026-09-15T06:20:18.701891+00:00"
+  },
+  {
+    "id": "3ce05d76-5ee5-42e9-b739-012aa500d0b2",
+    "url": "https://polling-frontend-dwg2.onrender.com/?tab=polls",
+    "canonical_url": "https://polling-frontend-dwg2.onrender.com",
+    "domain": "onrender.com",
+    "title": "Polling System",
+    "clean_title": "Polling System",
+    "raw_title": "polling-system-UPDATED-",
+    "description": "An enhanced full-stack real-time voting platform featuring secure user authentication, interactive dashboards, and live results visualization.",
+    "ai_description": "Cast a vote and watch live results pulse across a dashboard in real time. Explore authenticated polls as every click transforms into vivid, up-to-the-second data.",
+    "category": "Interactive",
+    "tags": [
+      "polling",
+      "real-time",
+      "voting",
+      "dashboard"
+    ],
+    "source": "github",
+    "source_type": "interactive",
+    "score": 81,
+    "screenshot_path": "screenshots/polling-frontend-dwg2-onrender-com.webp",
+    "why_interesting": "It turns a simple vote into an instantly visible, interactive data experience.",
+    "discovered_at": "2026-09-15T16:47:39.114344+00:00",
+    "published_at": "2026-09-15T16:47:39.114344+00:00"
+  },
+  {
+    "id": "f1b82b47-a092-4d5e-bc4e-beb464bcaf94",
+    "url": "https://luxa-theta.vercel.app",
+    "canonical_url": "https://luxa-theta.vercel.app",
+    "domain": "vercel.app",
+    "title": "luxa-demo",
+    "clean_title": "luxa-demo",
+    "raw_title": "luxa-demo",
+    "description": "LUXA — Interactive lighting experience by TD Lighting Experience",
+    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "category": "Interactive",
+    "tags": [
+      "Interactive"
+    ],
+    "source": "github",
+    "source_type": "interactive",
+    "score": 77,
+    "screenshot_path": "screenshots/luxa-theta-vercel-app.webp",
+    "why_interesting": "Curated for your interest",
+    "discovered_at": "2026-09-15T16:47:48.231104+00:00",
+    "published_at": "2026-09-15T16:47:48.231104+00:00"
   }
 ]
