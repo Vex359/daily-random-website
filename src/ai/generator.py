@@ -109,28 +109,24 @@ def categorize_candidate(candidate: dict[str, Any]) -> str:
         " ".join(candidate.get("headings") or []) if isinstance(candidate.get("headings"), list) else "",
     ]).lower()
 
-    if any(k in text for k in ["3d", "webgl", "threejs", "three.js", "shader", "canvas", "opengl"]):
-        return "3D & Graphics"
-    if any(k in text for k in ["voice", "tts", "asr", "audio", "speech", "sound", "music", "podcast"]):
-        return "Audio & Voice"
-    if any(k in text for k in ["game", "play", "puzzle", "arcade", "simulator", "quest"]):
+    if any(k in text for k in ["game", "play", "puzzle", "arcade", "quest"]):
         return "Games"
-    if any(k in text for k in ["ai", "llm", "gpt", "neural", "deep learning", "machine learning", "model", "qwen"]):
-        return "AI & ML"
-    if any(k in text for k in ["developer", "code", "github", "git", "api", "database", "redis", "sdk", "cli", "telemetry", "observability", "analytics"]):
-        return "Developer Tools"
+    if any(k in text for k in ["interactive", "simulator", "webgl", "3d", "canvas", "three.js", "shader"]):
+        return "Interactive"
+    if any(k in text for k in ["tool", "utility", "converter", "calculator", "developer", "code", "github", "git", "api", "database", "redis", "analytics", "voice", "tts", "ai", "model"]):
+        return "Tools"
     if any(k in text for k in ["art", "generative", "creative", "design", "gallery", "drawing", "illustration"]):
-        return "Art & Design"
+        return "Art"
     if any(k in text for k in ["learn", "teach", "history", "wikipedia", "education", "explorable", "guide"]):
         return "Educational"
-    if any(k in text for k in ["weird", "strange", "bizarre", "fun", "useless", "random", "novelty"]):
-        return "Weird & Fun"
-    if any(k in text for k in ["tool", "utility", "converter", "calculator"]):
-        return "Tools"
-    if any(k in text for k in ["productivity", "workspace", "notes", "task"]):
-        return "Productivity"
+    if any(k in text for k in ["weird", "strange", "bizarre", "useless", "novelty", "funny", "random"]):
+        return "Weird"
 
-    return candidate.get("category") or "Interactive"
+    existing = candidate.get("category")
+    if existing and existing in ("Interactive", "Weird", "Tools", "Games", "Art", "Educational", "General"):
+        return existing
+
+    return "General"
 
 
 def generate_tags(candidate: dict[str, Any], category: str = "") -> list[str]:

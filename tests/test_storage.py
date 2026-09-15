@@ -582,5 +582,5 @@ class TestEdgeCases:
 
     def test_valid_categories(self) -> None:
         """Ensure VALID_CATEGORIES matches spec."""
-        expected = {"Interactive", "Weird", "Tools", "Games", "Art", "Educational"}
+        expected = {"Interactive", "Weird", "Tools", "Games", "Art", "Educational", "General"}
         assert VALID_CATEGORIES == expected

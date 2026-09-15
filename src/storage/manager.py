@@ -25,6 +25,7 @@ VALID_CATEGORIES: frozenset[str] = frozenset({
     "Games",
     "Art",
     "Educational",
+    "General",
 })
 
 # Valid source types

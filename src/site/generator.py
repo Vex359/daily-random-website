@@ -48,6 +48,7 @@ VALID_CATEGORIES: tuple[str, ...] = (
     "Games",
     "Art",
     "Educational",
+    "General",
 )
 
 CATEGORY_SLUGS: dict[str, str] = {
@@ -57,6 +58,7 @@ CATEGORY_SLUGS: dict[str, str] = {
     "Games": "games",
     "Art": "art",
     "Educational": "educational",
+    "General": "general",
 }
 
 POPULAR_TAGS: tuple[str, ...] = (
@@ -291,51 +293,12 @@ def _generate_index_page(posts: list[dict[str, Any]]) -> str:
 {_site_footer()}"""
 
 
-def _render_filter_dropdown(posts: list[dict[str, Any]], active: str = "all") -> str:
-    """Render a clean <select> dropdown containing all categories and tags."""
-    lines = ['      <div class="filter-dropdown-wrap">']
-    lines.append('        <label for="category-select" class="filter-label">🏷️ Filter by Tag / Category:</label>')
-    lines.append('        <select id="category-select" class="filter-select">')
-    lines.append('          <option value="all">🌟 All Discoveries</option>')
-    lines.append('          <optgroup label="Categories">')
-    seen_slugs = set()
-    for cat in VALID_CATEGORIES:
-        slug = CATEGORY_SLUGS[cat]
-        if slug not in seen_slugs:
-            seen_slugs.add(slug)
-            sel = ' selected="selected"' if slug == active else ""
-            lines.append(f'            <option value="{slug}"{sel}>{_esc_display(cat)}</option>')
-    lines.append('          </optgroup>')
-
-    # Unique tags from posts + popular topics
-    tag_options = set(POPULAR_TAGS)
-    for p in posts:
-        tags = p.get("tags")
-        if isinstance(tags, list):
-            for t in tags:
-                if t and t not in VALID_CATEGORIES:
-                    tag_options.add(str(t))
-
-    if tag_options:
-        lines.append('          <optgroup label="Topic Tags">')
-        for t in sorted(list(tag_options)):
-            slug = str(t).lower().replace(" ", "-")
-            sel = ' selected="selected"' if slug == active else ""
-            lines.append(f'            <option value="{slug}"{sel}>#{_esc_display(str(t))}</option>')
-        lines.append('          </optgroup>')
-
-    lines.append('        </select>')
-    lines.append('      </div>')
-    return "\n".join(lines)
-
-
 def _generate_archive_page(posts: list[dict[str, Any]]) -> str:
     """Generate the archive page HTML."""
     sorted_posts = sorted(
         posts, key=lambda p: p.get("discovered_at", ""), reverse=True
     )
 
-    dropdown_html = _render_filter_dropdown(sorted_posts, "all")
     buttons_html = _render_filter_buttons("all")
 
     if sorted_posts:
@@ -345,7 +308,7 @@ def _generate_archive_page(posts: list[dict[str, Any]]) -> str:
 {cards_html}
       </div>
       <div id="filter-empty-state" class="empty-state" style="display:none;">
-        <p>No discoveries match this tag yet. Check back soon!</p>
+        <p>No discoveries match this category yet. Check back soon!</p>
       </div>
     </section>"""
     else:
@@ -360,10 +323,7 @@ def _generate_archive_page(posts: list[dict[str, Any]]) -> str:
 {_site_header("archive")}
   <main class="site-main">
     <section class="filter-bar">
-      <div class="filter-header">
-        <h2>All Discoveries</h2>
-{dropdown_html}
-      </div>
+      <h2>All Discoveries</h2>
       <div class="filter-buttons">
 {buttons_html}
       </div>
@@ -640,48 +600,6 @@ img { display: block; max-width: 100%; height: auto; }
   margin-bottom: 2rem;
 }
 
-.filter-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 1rem;
-  width: 100%;
-}
-
-.filter-dropdown-wrap {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  flex-wrap: wrap;
-}
-
-.filter-label {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--color-text-muted);
-}
-
-.filter-select {
-  padding: 0.45rem 1rem;
-  border: 1px solid var(--color-border);
-  border-radius: 8px;
-  background: var(--color-surface);
-  color: var(--color-text);
-  font-size: 0.875rem;
-  font-weight: 500;
-  cursor: pointer;
-  outline: none;
-  font-family: var(--font-sans);
-  box-shadow: var(--shadow-sm);
-  transition: border-color 0.2s, box-shadow 0.2s;
-}
-
-.filter-select:focus {
-  border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
-}
-
 .filter-buttons {
   display: flex;
   flex-wrap: wrap;
@@ -828,7 +746,6 @@ _JS = """\
 // Category & Tag filter for archive and category pages
 document.addEventListener('DOMContentLoaded', function() {
   var buttons = document.querySelectorAll('.filter-btn');
-  var dropdown = document.getElementById('category-select');
   var cards = document.querySelectorAll('.post-card');
 
   if (!cards.length) return;
@@ -845,16 +762,6 @@ document.addEventListener('DOMContentLoaded', function() {
         b.classList.remove('active');
       }
     });
-
-    // Update dropdown selection
-    if (dropdown) {
-      for (var i = 0; i < dropdown.options.length; i++) {
-        if (dropdown.options[i].value.toLowerCase() === filter) {
-          dropdown.selectedIndex = i;
-          break;
-        }
-      }
-    }
 
     // Filter cards
     var visible = 0;
@@ -882,12 +789,6 @@ document.addEventListener('DOMContentLoaded', function() {
       applyFilter(this.getAttribute('data-filter'));
     });
   });
-
-  if (dropdown) {
-    dropdown.addEventListener('change', function() {
-      applyFilter(this.value);
-    });
-  }
 
   var tagPills = document.querySelectorAll('.post-tag-pill');
   tagPills.forEach(function(pill) {
@@ -1158,7 +1059,7 @@ def main() -> None:
     expected = [
         "index.html", "archive.html", "style.css", "app.js",
         "interactive.html", "weird.html", "tools.html",
-        "games.html", "art.html", "educational.html",
+        "games.html", "art.html", "educational.html", "general.html",
     ]
     print(f"\n{'='*60}")
     print("STATIC SITE GENERATOR — DEMO")
