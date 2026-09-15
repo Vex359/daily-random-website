@@ -7,3 +7,6 @@ dist/
 node_modules/
 .screenshot/
 data/seen_domains.json
+
+# Local Netlify folder
+.netlify
