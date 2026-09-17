@@ -145,5 +145,52 @@
     "why_interesting": "It turns a simple vote into an instantly visible, interactive data experience.",
     "discovered_at": "2026-09-15T16:47:39.114344+00:00",
     "published_at": "2026-09-15T16:47:39.114344+00:00"
+  },
+  {
+    "id": "80cb03a3-2877-469e-a2f0-10815876b108",
+    "url": "https://inflightsimulator.com",
+    "canonical_url": "https://inflightsimulator.com",
+    "domain": "inflightsimulator.com",
+    "title": "I made a flight",
+    "clean_title": "I made a flight",
+    "raw_title": "Show HN: I made a flight simulator, except you're just a passenger",
+    "description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "category": "Interactive",
+    "tags": [
+      "Interactive"
+    ],
+    "source": "hackernews",
+    "source_type": "show_hn",
+    "score": 81,
+    "screenshot_path": "screenshots/inflightsimulator-com.webp",
+    "why_interesting": "Curated for your interest",
+    "discovered_at": "2026-09-17T15:58:45.982494+00:00",
+    "published_at": "2026-09-17T15:58:45.982494+00:00"
+  },
+  {
+    "id": "0c91e4e5-fda2-4dcb-b10c-c92c1bd77724",
+    "url": "https://patchies.app",
+    "canonical_url": "https://patchies.app",
+    "domain": "patchies.app",
+    "title": "patchies",
+    "clean_title": "patchies",
+    "raw_title": "patchies",
+    "description": "Write small programs with tools & libraries you know and patch 'em together. Make interactive widgets, visuals, sounds, and play with computation on the web.",
+    "ai_description": "Build tiny programs with the tools and libraries you already know, then snap them together into interactive widgets, visuals, sounds, and playful web experiments. What will you patch together first? 🧩",
+    "category": "Developer Tools",
+    "tags": [
+      "programming",
+      "web apps",
+      "interactive widgets",
+      "creative coding"
+    ],
+    "source": "github",
+    "source_type": "web_experiment",
+    "score": 81,
+    "screenshot_path": "screenshots/patchies-app.webp",
+    "why_interesting": "It turns coding into a tactile, modular playground where simple pieces become living web creations.",
+    "discovered_at": "2026-09-17T15:58:58.491653+00:00",
+    "published_at": "2026-09-17T15:58:58.491653+00:00"
   }
 ]
