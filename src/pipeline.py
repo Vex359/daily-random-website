@@ -237,7 +237,7 @@ class ContentPipeline:
     def validate_and_inspect(
         self,
         candidates: list[dict[str, Any]],
-        max_to_inspect: int = 25,
+        max_to_inspect: int = 50,
     ) -> list[dict[str, Any]]:
         """Perform HTTP checks and extract page metadata for candidates."""
         validated: list[dict[str, Any]] = []
@@ -257,6 +257,10 @@ class ContentPipeline:
                     allow_redirects=True,
                     stream=True,
                 )
+                if resp.status_code != 200:
+                    logger.debug("Non-200 status code (%s) for %s", resp.status_code, url)
+                    continue
+
                 safety_check = self.safety_filter.check_response(resp)
                 if not safety_check["is_safe"]:
                     logger.debug("Safety check failed for %s: %s", url, safety_check["issues"])
@@ -290,9 +294,7 @@ class ContentPipeline:
                 validated.append(candidate_updated)
             except Exception as exc:  # noqa: BLE001
                 logger.debug("Validation fetch failed for %s: %s", url, exc)
-                # If network fails during inspection, we can keep the candidate if it has a title
-                if candidate.get("title"):
-                    validated.append(candidate)
+                # Dead site / unreachable URL — do not add to validated candidates
 
         logger.info("Validation complete: %d valid candidates", len(validated))
         return validated
@@ -342,6 +344,15 @@ class ContentPipeline:
         rel_screenshot_path = f"screenshots/{filename}"
 
         if not dry_run:
+            try:
+                check_resp = self.session.get(url, timeout=self.request_timeout, allow_redirects=True, stream=True)
+                if check_resp.status_code >= 400:
+                    raise ValueError(f"Site returned HTTP {check_resp.status_code}: {url}")
+            except Exception as exc:
+                if "Site returned HTTP" in str(exc):
+                    raise
+                logger.debug("Pre-enrichment reachability warning for %s: %s", url, exc)
+
             try:
                 self.screenshot.capture_screenshot(url, screenshot_path)
             except Exception as exc:  # noqa: BLE001
@@ -512,21 +523,22 @@ class ContentPipeline:
         # 4. Score
         scored = self.score_candidates(eval_pool)
 
-        # 5. Select Winners and Enrich
-        winners = scored[:limit]
-        for winner in winners:
+        # 5. Select Winners and Enrich (skip broken/unreachable candidates)
+        for candidate in scored:
+            if len(published_posts) >= limit:
+                break
             try:
-                post = self.enrich_candidate(winner, dry_run=dry_run)
+                post = self.enrich_candidate(candidate, dry_run=dry_run)
                 published = self.publish_post(post, dry_run=dry_run)
                 published_posts.append(published)
                 logger.info("Successfully published post: %s (%s)", published["title"], published["url"])
             except Exception as exc:
-                err_msg = f"Failed to publish {winner.get('url')}: {exc}"
-                logger.exception(err_msg)
+                err_msg = f"Skipping unreachable or failed candidate {candidate.get('url')}: {exc}"
+                logger.warning(err_msg)
                 errors.append(err_msg)
                 self.dlq.record_failure(
-                    url=winner.get("url", "unknown"),
-                    source=winner.get("source", "unknown"),
+                    url=candidate.get("url", "unknown"),
+                    source=candidate.get("source", "unknown"),
                     error=exc,
                     error_type="permanent",
                     details={"phase": "enrich_and_publish"},

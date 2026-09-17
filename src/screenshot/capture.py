@@ -163,7 +163,24 @@ class ScreenshotCapture:
         timeout_ms: int,
     ) -> None:
         """Navigate, scroll to trigger lazy loads, then screenshot."""
-        page.goto(url, wait_until="networkidle", timeout=timeout_ms)  # type: ignore[union-attr]
+        response = page.goto(url, wait_until="networkidle", timeout=timeout_ms)  # type: ignore[union-attr]
+        status = getattr(response, "status", None)
+        if isinstance(status, int) and status >= 400:
+            raise PlaywrightError(f"HTTP error {status} loading {url}")
+
+        # Check for error page indicators in title
+        try:
+            raw_title = getattr(page, "title", None)
+            if callable(raw_title):
+                t_val = raw_title()
+                if isinstance(t_val, str):
+                    page_title = t_val.lower()
+                    if any(err in page_title for err in ["404 not found", "404 - not found", "deployment not found", "page not found", "502 bad gateway"]):
+                        raise PlaywrightError(f"Page error title '{t_val}' for {url}")
+        except PlaywrightError:
+            raise
+        except Exception:
+            pass
 
         # Auto-scroll to trigger lazy-loaded content
         self._auto_scroll(page)  # type: ignore[arg-type]

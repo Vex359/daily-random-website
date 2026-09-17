@@ -16,6 +16,9 @@ _MULTI_PART_TLDS: frozenset[str] = frozenset({
     "org.uk", "net.au", "gov.uk", "ac.uk",
     "com.ar", "com.co", "org.au", "net.nz",
     "or.jp", "ne.jp", "go.jp",
+    "vercel.app", "onrender.com", "github.io", "netlify.app",
+    "pages.dev", "herokuapp.com", "fly.dev", "web.app", "firebaseapp.com",
+    "surge.sh", "glitch.me",
 })
 
 # Data directory relative to project root (two levels up from src/filters/)

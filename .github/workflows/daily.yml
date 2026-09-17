@@ -2,7 +2,7 @@ name: Daily Discovery
 
 on:
   schedule:
-    - cron: '0 12 */2 * *'  # Noon UTC every 2 days
+    - cron: '23 12 */2 * *'  # 12:23 UTC (5:53 PM IST) every 2 days (off-peak minute to avoid GH Actions queue pileup)
   workflow_dispatch:          # Manual trigger
   push:
     branches: [ master, main ]

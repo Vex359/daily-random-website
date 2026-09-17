@@ -41,6 +41,9 @@ MIN_BODY_LENGTH = 200
 LOW_QUALITY_PATTERNS: tuple[str, ...] = (
     r"<title>\s*(?:404|not found|error|page not found)\s*</title>",
     r"<h1>\s*(?:404|not found|error)\s*</h1>",
+    r"deployment\s*not\s*found",
+    r"this\s*page\s*doesn't\s*exist",
+    r"page\s*not\s*found",
     r"<title>\s*untitled\s*</title>",
     r"<title>\s*test\s*</title>",
     r"<title>\s*hello\s*world\s*</title>",
@@ -163,7 +166,11 @@ class QualityFilter:
 
         # Extract body text (strip HTML tags for text analysis)
         text = self._extract_text(html_stripped)
-        if len(text) < self._min_body_length:
+        has_interactive_elements = any(
+            tag in html_stripped.lower()
+            for tag in ("<canvas", "<svg", 'id="app"', 'id="root"', 'id="game"', "webgl", "three.js")
+        )
+        if len(text) < self._min_body_length and not has_interactive_elements:
             return False
 
         return True
