@@ -151,14 +151,17 @@
     "url": "https://inflightsimulator.com",
     "canonical_url": "https://inflightsimulator.com",
     "domain": "inflightsimulator.com",
-    "title": "I made a flight",
-    "clean_title": "I made a flight",
+    "title": "Inflight Simulator",
+    "clean_title": "Inflight Simulator",
     "raw_title": "Show HN: I made a flight simulator, except you're just a passenger",
-    "description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
-    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "description": "A browser flight simulator where you sit back as a passenger. Watch clouds drift by, explore flight routes, and soak in the soothing cabin atmosphere.",
+    "ai_description": "Kick back in the passenger cabin of a virtual airplane as you soar above the clouds. Pick an origin and destination to gaze out the window and enjoy a wonderfully calm flight experience. ✈️☁️",
     "category": "Interactive",
     "tags": [
-      "Interactive"
+      "Flight Simulator",
+      "Interactive",
+      "3D",
+      "Relaxation"
     ],
     "source": "hackernews",
     "source_type": "show_hn",
