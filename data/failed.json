@@ -38,5 +38,15 @@
     "details": {
       "phase": "enrich_and_publish"
     }
+  },
+  {
+    "url": "source://github",
+    "source": "github",
+    "error": "Rate limit exhausted. Try again in 30s.",
+    "error_type": "unknown",
+    "timestamp": "2026-09-19T16:01:12.261034+00:00",
+    "details": {
+      "phase": "collection"
+    }
   }
 ]
