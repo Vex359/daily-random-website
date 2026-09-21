@@ -240,5 +240,52 @@
     "why_interesting": "Curated for your interest",
     "discovered_at": "2026-09-19T16:02:17.624686+00:00",
     "published_at": "2026-09-19T16:02:17.624686+00:00"
+  },
+  {
+    "id": "f7db9b7a-858a-4bbe-b0cf-4f9601604839",
+    "url": "https://tinybrains.dev",
+    "canonical_url": "https://tinybrains.dev",
+    "domain": "tinybrains.dev",
+    "title": "TinyBrains",
+    "clean_title": "TinyBrains",
+    "raw_title": "Show HN: A competition for small neural networks that play strategy games",
+    "description": "Watch tiny neural networks battle it out in strategy games, where every clever move is earned through code and training. See which small brain can outthink the rest—and cheer on the next champion. 🧠",
+    "ai_description": "Watch tiny neural networks battle it out in strategy games, where every clever move is earned through code and training. See which small brain can outthink the rest—and cheer on the next champion. 🧠",
+    "category": "AI & ML",
+    "tags": [
+      "ai",
+      "neural networks",
+      "strategy games",
+      "competition"
+    ],
+    "source": "hackernews",
+    "source_type": "show_hn",
+    "score": 81,
+    "screenshot_path": "screenshots/tinybrains-dev.webp",
+    "why_interesting": "It turns compact neural networks into competitive strategy-game players, making machine learning feel like a live arena.",
+    "discovered_at": "2026-09-21T18:18:37.364038+00:00",
+    "published_at": "2026-09-21T18:18:37.364038+00:00"
+  },
+  {
+    "id": "64fec44e-dd75-4e5e-89f5-fa21d4c9b86e",
+    "url": "https://radius.to/",
+    "canonical_url": "https://radius.to",
+    "domain": "radius.to",
+    "title": "Radius",
+    "clean_title": "Radius",
+    "raw_title": "Show HN: Radius – A Meetup.com Alternative",
+    "description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "category": "Tools",
+    "tags": [
+      "Tools"
+    ],
+    "source": "hackernews",
+    "source_type": "show_hn",
+    "score": 69,
+    "screenshot_path": "screenshots/radius-to.webp",
+    "why_interesting": "Curated for your interest",
+    "discovered_at": "2026-09-21T18:18:47.511943+00:00",
+    "published_at": "2026-09-21T18:18:47.511943+00:00"
   }
 ]
