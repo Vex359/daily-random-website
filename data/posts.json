@@ -287,5 +287,53 @@
     "why_interesting": "Curated for your interest",
     "discovered_at": "2026-09-21T18:18:47.511943+00:00",
     "published_at": "2026-09-21T18:18:47.511943+00:00"
+  },
+  {
+    "id": "4e84a284-7ac7-41c2-91a4-2e99045e5d40",
+    "url": "https://HaleemaGit.github.io/ehacare-prototype/",
+    "canonical_url": "https://haleemagit.github.io/ehacare-prototype",
+    "domain": "haleemagit.github.io",
+    "title": "ehacare-prototype",
+    "clean_title": "ehacare-prototype",
+    "raw_title": "ehacare-prototype",
+    "description": "EHACare Platform — Interactive Stakeholder Demo (Lafiya · WARIF · MSF · MAMAI)",
+    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "category": "Interactive",
+    "tags": [
+      "Interactive",
+      "AI"
+    ],
+    "source": "github",
+    "source_type": "interactive",
+    "score": 77,
+    "screenshot_path": "screenshots/HaleemaGit-github-io.webp",
+    "why_interesting": "Curated for your interest",
+    "discovered_at": "2026-09-23T17:21:59.079354+00:00",
+    "published_at": "2026-09-23T17:21:59.079354+00:00"
+  },
+  {
+    "id": "85388aa8-7c1f-4063-b2f8-ab54270728bd",
+    "url": "https://bearclaw-pilot.vercel.app",
+    "canonical_url": "https://bearclaw-pilot.vercel.app",
+    "domain": "bearclaw-pilot.vercel.app",
+    "title": "Bearclaw Pilot",
+    "clean_title": "Bearclaw Pilot",
+    "raw_title": "bearclaw-pilot",
+    "description": "Interactive demo site for BEARCLAW — a benchmark testing whether AI omits animal welfare from civic and legal tasks. Built with React, TypeScript, and Tailwind.",
+    "ai_description": "Run AI through civic and legal scenarios, then watch whether animal welfare slips through the cracks. Test the model, inspect the omissions, and challenge what responsible AI really means.",
+    "category": "Educational",
+    "tags": [
+      "bearclaw",
+      "ai-benchmark",
+      "animal-welfare",
+      "civic-ai"
+    ],
+    "source": "github",
+    "source_type": "interactive",
+    "score": 77,
+    "screenshot_path": "screenshots/bearclaw-pilot-vercel-app.webp",
+    "why_interesting": "It turns an abstract AI ethics issue into a vivid, hands-on benchmark you can explore.",
+    "discovered_at": "2026-09-23T17:22:04.251183+00:00",
+    "published_at": "2026-09-23T17:22:04.251183+00:00"
   }
 ]
