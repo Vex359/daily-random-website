@@ -335,5 +335,49 @@
     "why_interesting": "It turns an abstract AI ethics issue into a vivid, hands-on benchmark you can explore.",
     "discovered_at": "2026-09-23T17:22:04.251183+00:00",
     "published_at": "2026-09-23T17:22:04.251183+00:00"
+  },
+  {
+    "id": "951ab06c-a94e-4e06-990e-dfe712bda68d",
+    "url": "https://s-iguchi09.github.io/apps/wpf-standard-control-demo.html",
+    "canonical_url": "https://s-iguchi09.github.io/apps/wpf-standard-control-demo.html",
+    "domain": "s-iguchi09.github.io",
+    "title": "WPFStandardControlDemoApp",
+    "clean_title": "WPFStandardControlDemoApp",
+    "raw_title": "WPFStandardControlDemoApp",
+    "description": "Interactive demo of standard WPF controls on .NET 10: configuration, visual styles, and runtime behavior.",
+    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "category": "Interactive",
+    "tags": [
+      "Interactive"
+    ],
+    "source": "github",
+    "source_type": "interactive",
+    "score": 81,
+    "screenshot_path": "screenshots/s-iguchi09-github-io.webp",
+    "why_interesting": "Curated for your interest",
+    "discovered_at": "2026-09-25T17:25:42.147436+00:00",
+    "published_at": "2026-09-25T17:25:42.147436+00:00"
+  },
+  {
+    "id": "4064e901-bb39-4071-b4be-02c1f675d344",
+    "url": "https://bastardica.mitpit.com",
+    "canonical_url": "https://bastardica.mitpit.com",
+    "domain": "mitpit.com",
+    "title": "Make cursed fonts like",
+    "clean_title": "Make cursed fonts like",
+    "raw_title": "Show HN: Make cursed fonts like Times New Bastard",
+    "description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "category": "Tools",
+    "tags": [
+      "Tools"
+    ],
+    "source": "hackernews",
+    "source_type": "show_hn",
+    "score": 69,
+    "screenshot_path": "screenshots/bastardica-mitpit-com.webp",
+    "why_interesting": "Curated for your interest",
+    "discovered_at": "2026-09-25T17:25:52.993263+00:00",
+    "published_at": "2026-09-25T17:25:52.993263+00:00"
   }
 ]
