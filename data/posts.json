@@ -379,5 +379,51 @@
     "why_interesting": "Curated for your interest",
     "discovered_at": "2026-09-25T17:25:52.993263+00:00",
     "published_at": "2026-09-25T17:25:52.993263+00:00"
+  },
+  {
+    "id": "71e22eb9-9938-442e-bcc3-ad98744ae449",
+    "url": "https://tinyaiarena.com/",
+    "canonical_url": "https://tinyaiarena.com",
+    "domain": "tinyaiarena.com",
+    "title": "TinyAIArena",
+    "clean_title": "TinyAIArena",
+    "raw_title": "Show HN: TinyAIArena watch AI agents battle it out",
+    "description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "category": "Tools",
+    "tags": [
+      "Tools",
+      "AI"
+    ],
+    "source": "hackernews",
+    "source_type": "show_hn",
+    "score": 69,
+    "screenshot_path": "screenshots/tinyaiarena-com.webp",
+    "why_interesting": "Curated for your interest",
+    "discovered_at": "2026-09-27T17:09:16.203022+00:00",
+    "published_at": "2026-09-27T17:09:16.203022+00:00"
+  },
+  {
+    "id": "048040fb-c6a8-4c60-be54-443a61c35042",
+    "url": "https://3d-retro.com/",
+    "canonical_url": "https://3d-retro.com",
+    "domain": "3d-retro.com",
+    "title": "A CC0 museum of",
+    "clean_title": "A CC0 museum of",
+    "raw_title": "Show HN: A CC0 museum of retro 3D tricks you can paste into a page",
+    "description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "category": "Tools",
+    "tags": [
+      "Tools",
+      "3D"
+    ],
+    "source": "hackernews",
+    "source_type": "show_hn",
+    "score": 69,
+    "screenshot_path": "screenshots/3d-retro-com.webp",
+    "why_interesting": "Curated for your interest",
+    "discovered_at": "2026-09-27T17:09:27.924478+00:00",
+    "published_at": "2026-09-27T17:09:27.924478+00:00"
   }
 ]
