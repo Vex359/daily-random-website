@@ -68,5 +68,25 @@
     "details": {
       "phase": "collection"
     }
+  },
+  {
+    "url": "source://github",
+    "source": "github",
+    "error": "GitHub API rate limit exceeded. Reset at: Tue Sep 29 18:12:56 2026",
+    "error_type": "unknown",
+    "timestamp": "2026-09-29T18:12:43.912635+00:00",
+    "details": {
+      "phase": "collection"
+    }
+  },
+  {
+    "url": "https://scissor.studio/",
+    "source": "hackernews",
+    "error": "Site returned HTTP 403: https://scissor.studio/",
+    "error_type": "permanent",
+    "timestamp": "2026-09-29T18:13:40.351676+00:00",
+    "details": {
+      "phase": "enrich_and_publish"
+    }
   }
 ]

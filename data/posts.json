@@ -425,5 +425,49 @@
     "why_interesting": "Curated for your interest",
     "discovered_at": "2026-09-27T17:09:27.924478+00:00",
     "published_at": "2026-09-27T17:09:27.924478+00:00"
+  },
+  {
+    "id": "fe89d844-be03-4934-b8af-e50a3d95b80e",
+    "url": "https://jonclegg.github.io/pacman-bakeoff/",
+    "canonical_url": "https://jonclegg.github.io/pacman-bakeoff",
+    "domain": "jonclegg.github.io",
+    "title": "...",
+    "clean_title": "...",
+    "raw_title": "Show HN: Pac-Bench – How well can models one-shot a Pac-Man game?",
+    "description": "... cover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "ai_description": "... cover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "category": "...",
+    "tags": [
+      "..."
+    ],
+    "source": "hackernews",
+    "source_type": "show_hn",
+    "score": 81,
+    "screenshot_path": "screenshots/jonclegg-github-io.webp",
+    "why_interesting": "...",
+    "discovered_at": "2026-09-29T18:13:40.194094+00:00",
+    "published_at": "2026-09-29T18:13:40.194094+00:00"
+  },
+  {
+    "id": "54b702bc-eaaf-4dbb-b529-58c397ca16e0",
+    "url": "https://loficities.com/",
+    "canonical_url": "https://loficities.com",
+    "domain": "loficities.com",
+    "title": "Lofi Cities",
+    "clean_title": "Lofi Cities",
+    "raw_title": "Show HN: Lofi Cities – Pixel-art city nights with browser-generated lofi",
+    "description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "category": "Art",
+    "tags": [
+      "Art"
+    ],
+    "source": "hackernews",
+    "source_type": "show_hn",
+    "score": 73,
+    "screenshot_path": "screenshots/loficities-com.webp",
+    "why_interesting": "Curated for your interest",
+    "discovered_at": "2026-09-29T18:13:46.727488+00:00",
+    "published_at": "2026-09-29T18:13:46.727488+00:00"
   }
 ]
