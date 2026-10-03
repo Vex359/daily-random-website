@@ -514,5 +514,50 @@
     "why_interesting": "Curated for your interest",
     "discovered_at": "2026-10-01T18:39:26.124814+00:00",
     "published_at": "2026-10-01T18:39:26.124814+00:00"
+  },
+  {
+    "id": "4995da2a-8dd6-4f2c-bc27-8dd3c0d71706",
+    "url": "https://offrun.dev/",
+    "canonical_url": "https://offrun.dev",
+    "domain": "offrun.dev",
+    "title": "Offrun",
+    "clean_title": "Offrun",
+    "raw_title": "Show HN: Offrun – manage every coding agent from one workspace",
+    "description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "category": "Tools",
+    "tags": [
+      "Tools"
+    ],
+    "source": "hackernews",
+    "source_type": "show_hn",
+    "score": 69,
+    "screenshot_path": "screenshots/offrun-dev.webp",
+    "why_interesting": "Curated for your interest",
+    "discovered_at": "2026-10-03T16:36:54.658709+00:00",
+    "published_at": "2026-10-03T16:36:54.658709+00:00"
+  },
+  {
+    "id": "f1a2b868-f012-413e-90c8-05eec5cfce9c",
+    "url": "https://stillwet.art/",
+    "canonical_url": "https://stillwet.art",
+    "domain": "stillwet.art",
+    "title": "Giving Opus 5.5 a",
+    "clean_title": "Giving Opus 5.5 a",
+    "raw_title": "Show HN: Giving Opus 5.5 a simulated paint canvas",
+    "description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "category": "Tools",
+    "tags": [
+      "Tools",
+      "AI"
+    ],
+    "source": "hackernews",
+    "source_type": "show_hn",
+    "score": 69,
+    "screenshot_path": "screenshots/stillwet-art.webp",
+    "why_interesting": "Curated for your interest",
+    "discovered_at": "2026-10-03T16:37:01.432245+00:00",
+    "published_at": "2026-10-03T16:37:01.432245+00:00"
   }
 ]

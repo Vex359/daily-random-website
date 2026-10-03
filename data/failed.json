@@ -98,5 +98,25 @@
     "details": {
       "phase": "collection"
     }
+  },
+  {
+    "url": "source://github",
+    "source": "github",
+    "error": "Rate limit exhausted. Try again in 17s.",
+    "error_type": "unknown",
+    "timestamp": "2026-10-03T16:35:43.272557+00:00",
+    "details": {
+      "phase": "collection"
+    }
+  },
+  {
+    "url": "https://www.newgrounds.com/",
+    "source": "hackernews",
+    "error": "Site returned HTTP 403: https://www.newgrounds.com/",
+    "error_type": "permanent",
+    "timestamp": "2026-10-03T16:36:25.711190+00:00",
+    "details": {
+      "phase": "enrich_and_publish"
+    }
   }
 ]
