@@ -559,5 +559,51 @@
     "why_interesting": "Curated for your interest",
     "discovered_at": "2026-10-03T16:37:01.432245+00:00",
     "published_at": "2026-10-03T16:37:01.432245+00:00"
+  },
+  {
+    "id": "5afd113e-4884-4d68-9193-db76a5d9fb7d",
+    "url": "https://indiegamedev.org/",
+    "canonical_url": "https://indiegamedev.org",
+    "domain": "indiegamedev.org",
+    "title": "indiegamedev.org",
+    "clean_title": "indiegamedev.org",
+    "raw_title": "indiegamedev.org",
+    "description": "Open-source, Markdown-first static site for indiegamedev.org: news, articles, tutorials, and community resources for indie game devs. PRs welcome.",
+    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "category": "Interactive",
+    "tags": [
+      "Interactive",
+      "Game"
+    ],
+    "source": "github",
+    "source_type": "web_experiment",
+    "score": 85,
+    "screenshot_path": "screenshots/indiegamedev-org.webp",
+    "why_interesting": "Curated for your interest",
+    "discovered_at": "2026-10-05T20:51:10.568087+00:00",
+    "published_at": "2026-10-05T20:51:10.568087+00:00"
+  },
+  {
+    "id": "b51608c8-c2d1-412e-ae40-eeff4ab9224a",
+    "url": "https://reiwebdeveloper.github.io/rei_creative_coding_lab/",
+    "canonical_url": "https://reiwebdeveloper.github.io/rei_creative_coding_lab",
+    "domain": "reiwebdeveloper.github.io",
+    "title": "rei_creative_coding_lab",
+    "clean_title": "rei_creative_coding_lab",
+    "raw_title": "rei_creative_coding_lab",
+    "description": "A journey to become a system developer doing different experiments.",
+    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "category": "Interactive",
+    "tags": [
+      "Interactive",
+      "Dev Tools"
+    ],
+    "source": "github",
+    "source_type": "creative_coding",
+    "score": 81,
+    "screenshot_path": "screenshots/reiwebdeveloper-github-io.webp",
+    "why_interesting": "Curated for your interest",
+    "discovered_at": "2026-10-05T20:51:29.974687+00:00",
+    "published_at": "2026-10-05T20:51:29.974687+00:00"
   }
 ]
