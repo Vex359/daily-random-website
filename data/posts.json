@@ -605,5 +605,50 @@
     "why_interesting": "Curated for your interest",
     "discovered_at": "2026-10-05T20:51:29.974687+00:00",
     "published_at": "2026-10-05T20:51:29.974687+00:00"
+  },
+  {
+    "id": "73f554d1-8899-441b-80a3-ef681e7a18e2",
+    "url": "https://ledova.io",
+    "canonical_url": "https://ledova.io",
+    "domain": "ledova.io",
+    "title": "ledova",
+    "clean_title": "ledova",
+    "raw_title": "ledova",
+    "description": "Experimental open-source infrastructure for issuing and transferring tokenized private-company shares on public chains — allowlist-gated smart contracts, a Django API, and web/mobile clients. Testnet-only and unaudited.",
+    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "category": "Interactive",
+    "tags": [
+      "Interactive",
+      "AI"
+    ],
+    "source": "github",
+    "source_type": "web_experiment",
+    "score": 81,
+    "screenshot_path": "screenshots/ledova-io.webp",
+    "why_interesting": "Curated for your interest",
+    "discovered_at": "2026-10-09T18:29:43.395326+00:00",
+    "published_at": "2026-10-09T18:29:43.395326+00:00"
+  },
+  {
+    "id": "d8428ab3-c27d-4431-b4b2-cf97d10712af",
+    "url": "https://spenchh.github.io/fpga-motor-control-lab/",
+    "canonical_url": "https://spenchh.github.io/fpga-motor-control-lab",
+    "domain": "spenchh.github.io",
+    "title": "fpga-motor-control-lab",
+    "clean_title": "fpga-motor-control-lab",
+    "raw_title": "fpga-motor-control-lab",
+    "description": "Interactive FPGA motor-control documentation, demos, and project assistant",
+    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "category": "Interactive",
+    "tags": [
+      "Interactive"
+    ],
+    "source": "github",
+    "source_type": "interactive",
+    "score": 77,
+    "screenshot_path": "screenshots/spenchh-github-io.webp",
+    "why_interesting": "Curated for your interest",
+    "discovered_at": "2026-10-09T18:29:49.446006+00:00",
+    "published_at": "2026-10-09T18:29:49.446006+00:00"
   }
 ]
