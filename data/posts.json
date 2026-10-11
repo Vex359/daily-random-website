@@ -650,5 +650,52 @@
     "why_interesting": "Curated for your interest",
     "discovered_at": "2026-10-09T18:29:49.446006+00:00",
     "published_at": "2026-10-09T18:29:49.446006+00:00"
+  },
+  {
+    "id": "639d361e-0bc8-4cdf-83b4-1011481e3fa1",
+    "url": "https://betterwispr.com/",
+    "canonical_url": "https://betterwispr.com",
+    "domain": "betterwispr.com",
+    "title": "BetterWispr",
+    "clean_title": "BetterWispr",
+    "raw_title": "Show HN: BetterWispr – Free, open-source dictation for Mac",
+    "description": "Transform your voice into flawless text instantly with this free, open-source Mac dictation tool. No more hunting for settings—just speak and watch the magic happen.",
+    "ai_description": "Transform your voice into flawless text instantly with this free, open-source Mac dictation tool. No more hunting for settings—just speak and watch the magic happen.",
+    "category": "Audio & Voice",
+    "tags": [
+      "dictation",
+      "mac",
+      "open-source",
+      "voice-to-text"
+    ],
+    "source": "hackernews",
+    "source_type": "show_hn",
+    "score": 69,
+    "screenshot_path": "screenshots/betterwispr-com.webp",
+    "why_interesting": "It's completely free and open-source, putting professional-grade voice transcription directly on your Mac.",
+    "discovered_at": "2026-10-11T17:47:15.323745+00:00",
+    "published_at": "2026-10-11T17:47:15.323745+00:00"
+  },
+  {
+    "id": "226f2a62-b6b3-4ef6-89fd-f3e163f28e2a",
+    "url": "https://hangul.ink/blog/hangul-day",
+    "canonical_url": "https://hangul.ink/blog/hangul-day",
+    "domain": "hangul.ink",
+    "title": "Hangul",
+    "clean_title": "Hangul",
+    "raw_title": "Show HN: Happy Hangul Day! An RNN for Generating Korean Handwriting Strokes",
+    "description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "category": "Tools",
+    "tags": [
+      "Tools"
+    ],
+    "source": "hackernews",
+    "source_type": "show_hn",
+    "score": 69,
+    "screenshot_path": "screenshots/hangul-ink.webp",
+    "why_interesting": "Curated for your interest",
+    "discovered_at": "2026-10-11T17:47:24.181864+00:00",
+    "published_at": "2026-10-11T17:47:24.181864+00:00"
   }
 ]
