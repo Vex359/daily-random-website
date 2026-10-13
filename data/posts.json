@@ -697,5 +697,50 @@
     "why_interesting": "Curated for your interest",
     "discovered_at": "2026-10-11T17:47:24.181864+00:00",
     "published_at": "2026-10-11T17:47:24.181864+00:00"
+  },
+  {
+    "id": "d7856a71-c75d-427d-8cc2-6f41abcaefd1",
+    "url": "https://prakharquant.github.io/orangutan-odisha-mystery/",
+    "canonical_url": "https://prakharquant.github.io/orangutan-odisha-mystery",
+    "domain": "prakharquant.github.io",
+    "title": "orangutan-odisha-mystery",
+    "clean_title": "orangutan-odisha-mystery",
+    "raw_title": "orangutan-odisha-mystery",
+    "description": "An interactive visualization exploring how five baby orangutans could have ended up in Odisha, thousands of kilometres from their natural range.",
+    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "category": "Interactive",
+    "tags": [
+      "Interactive"
+    ],
+    "source": "github",
+    "source_type": "interactive",
+    "score": 81,
+    "screenshot_path": "screenshots/prakharquant-github-io.webp",
+    "why_interesting": "Curated for your interest",
+    "discovered_at": "2026-10-13T19:27:32.988023+00:00",
+    "published_at": "2026-10-13T19:27:32.988023+00:00"
+  },
+  {
+    "id": "47b0169c-e9dc-4579-8afb-191cbbc97fcd",
+    "url": "https://donovan-amx.vercel.app/",
+    "canonical_url": "https://donovan-amx.vercel.app",
+    "domain": "donovan-amx.vercel.app",
+    "title": "amaxing",
+    "clean_title": "amaxing",
+    "raw_title": "amaxing",
+    "description": "Amaxing — CDMX tours & experiences (bilingual EN/ES). Small groups led by local foodies, archaeologists and art historians. Self-guided walks, interactive maps, monthly local picks, and AI-generated travel news. Per-language cart (USD/MXN), Stripe checkout, QR-coded tickets. Independent operator based in Mexico City. Book via web or WhatsApp.MCP AI",
+    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "category": "Interactive",
+    "tags": [
+      "Interactive",
+      "AI"
+    ],
+    "source": "github",
+    "source_type": "web_experiment",
+    "score": 81,
+    "screenshot_path": "screenshots/donovan-amx-vercel-app.webp",
+    "why_interesting": "Curated for your interest",
+    "discovered_at": "2026-10-13T19:27:46.376746+00:00",
+    "published_at": "2026-10-13T19:27:46.376746+00:00"
   }
 ]
