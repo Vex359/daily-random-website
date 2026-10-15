@@ -742,5 +742,50 @@
     "why_interesting": "Curated for your interest",
     "discovered_at": "2026-10-13T19:27:46.376746+00:00",
     "published_at": "2026-10-13T19:27:46.376746+00:00"
+  },
+  {
+    "id": "ff0a3495-3f7d-43f8-b16f-c438f904aa97",
+    "url": "https://typesafe.ai/blog/jev-1-14",
+    "canonical_url": "https://typesafe.ai/blog/jev-1-14",
+    "domain": "typesafe.ai",
+    "title": "We’re releasing Jev 1.14.0",
+    "clean_title": "We’re releasing Jev 1.14.0",
+    "raw_title": "We’re releasing Jev 1.14.0 along with experimental features for dreamers",
+    "description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "category": "Weird",
+    "tags": [
+      "Weird",
+      "AI"
+    ],
+    "source": "hackernews",
+    "source_type": "best",
+    "score": 85,
+    "screenshot_path": "screenshots/typesafe-ai.webp",
+    "why_interesting": "Curated for your interest",
+    "discovered_at": "2026-10-15T17:16:06.932340+00:00",
+    "published_at": "2026-10-15T17:16:06.932340+00:00"
+  },
+  {
+    "id": "77276f11-2f43-4703-afa4-cc0648d8ad36",
+    "url": "https://proa.so/",
+    "canonical_url": "https://proa.so",
+    "domain": "proa.so",
+    "title": "Proa",
+    "clean_title": "Proa",
+    "raw_title": "Show HN: Proa – a Rust web framework with fast SSR and multi-target rendering",
+    "description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "category": "Tools",
+    "tags": [
+      "Tools"
+    ],
+    "source": "hackernews",
+    "source_type": "show_hn",
+    "score": 69,
+    "screenshot_path": "screenshots/proa-so.webp",
+    "why_interesting": "Curated for your interest",
+    "discovered_at": "2026-10-15T17:16:16.090714+00:00",
+    "published_at": "2026-10-15T17:16:16.090714+00:00"
   }
 ]
