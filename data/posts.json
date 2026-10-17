@@ -787,5 +787,52 @@
     "why_interesting": "Curated for your interest",
     "discovered_at": "2026-10-15T17:16:16.090714+00:00",
     "published_at": "2026-10-15T17:16:16.090714+00:00"
+  },
+  {
+    "id": "698f5fa1-1656-48bb-be1d-099ac3eacd1a",
+    "url": "https://wonderhop.io/en/",
+    "canonical_url": "https://wonderhop.io/en",
+    "domain": "wonderhop.io",
+    "title": "Wonderhop",
+    "clean_title": "Wonderhop",
+    "raw_title": "Show HN: Wonderhop – A daily game: guess what most people say, or what none do",
+    "description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "category": "Interactive",
+    "tags": [
+      "Interactive",
+      "AI",
+      "Game"
+    ],
+    "source": "hackernews",
+    "source_type": "show_hn",
+    "score": 81,
+    "screenshot_path": "screenshots/wonderhop-io.webp",
+    "why_interesting": "Curated for your interest",
+    "discovered_at": "2026-10-17T15:48:42.054548+00:00",
+    "published_at": "2026-10-17T15:48:42.054548+00:00"
+  },
+  {
+    "id": "69c5c995-5d54-476f-91c9-e46c7e7ddc97",
+    "url": "https://juliosuas.github.io/ai-garden/",
+    "canonical_url": "https://juliosuas.github.io/ai-garden",
+    "domain": "juliosuas.github.io",
+    "title": "ai-garden",
+    "clean_title": "ai-garden",
+    "raw_title": "ai-garden",
+    "description": "🌱 AI Garden — A living pixel-art world built by AI agents. Open for contributions. Autonomous AI, generative art, collaborative experiment. 130+ plants, 19 structures, real-time growth.",
+    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "category": "Interactive",
+    "tags": [
+      "Interactive",
+      "AI"
+    ],
+    "source": "github",
+    "source_type": "creative_coding",
+    "score": 81,
+    "screenshot_path": "screenshots/juliosuas-github-io.webp",
+    "why_interesting": "Curated for your interest",
+    "discovered_at": "2026-10-17T15:48:52.920266+00:00",
+    "published_at": "2026-10-17T15:48:52.920266+00:00"
   }
 ]
