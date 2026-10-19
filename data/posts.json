@@ -834,5 +834,50 @@
     "why_interesting": "Curated for your interest",
     "discovered_at": "2026-10-17T15:48:52.920266+00:00",
     "published_at": "2026-10-17T15:48:52.920266+00:00"
+  },
+  {
+    "id": "7d7bc554-51d1-44c0-ac8e-7f17eb6e8771",
+    "url": "https://3anddoneapp.com/try",
+    "canonical_url": "https://3anddoneapp.com/try",
+    "domain": "3anddoneapp.com",
+    "title": "I built a task",
+    "clean_title": "I built a task",
+    "raw_title": "Show HN: I built a task system to handle the drudgery so I could focus on tasks",
+    "description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "category": "Tools",
+    "tags": [
+      "Tools"
+    ],
+    "source": "hackernews",
+    "source_type": "show_hn",
+    "score": 69,
+    "screenshot_path": "screenshots/3anddoneapp-com.webp",
+    "why_interesting": "Curated for your interest",
+    "discovered_at": "2026-10-19T18:50:04.786447+00:00",
+    "published_at": "2026-10-19T18:50:04.786447+00:00"
+  },
+  {
+    "id": "169be01a-38ef-42d8-bd12-4c8197b0c456",
+    "url": "https://100toolkit.com/blog/deslop-model/",
+    "canonical_url": "https://100toolkit.com/blog/deslop-model",
+    "domain": "100toolkit.com",
+    "title": "Qwen3-4B with the AI",
+    "clean_title": "Qwen3-4B with the AI",
+    "raw_title": "Show HN: Qwen3-4B with the AI writing tics trained out",
+    "description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "category": "Tools",
+    "tags": [
+      "Tools",
+      "AI"
+    ],
+    "source": "hackernews",
+    "source_type": "show_hn",
+    "score": 69,
+    "screenshot_path": "screenshots/100toolkit-com.webp",
+    "why_interesting": "Curated for your interest",
+    "discovered_at": "2026-10-19T18:50:10.398265+00:00",
+    "published_at": "2026-10-19T18:50:10.398265+00:00"
   }
 ]
