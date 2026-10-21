@@ -879,5 +879,55 @@
     "why_interesting": "Curated for your interest",
     "discovered_at": "2026-10-19T18:50:10.398265+00:00",
     "published_at": "2026-10-19T18:50:10.398265+00:00"
+  },
+  {
+    "id": "3abf8887-f839-4350-8c07-43c6b36fa186",
+    "url": "https://kevinelong.github.io/ace-shot-diagrams/",
+    "canonical_url": "https://kevinelong.github.io/ace-shot-diagrams",
+    "domain": "kevinelong.github.io",
+    "title": "Ace Shot Diagrams",
+    "clean_title": "Ace Shot Diagrams",
+    "raw_title": "ace-shot-diagrams",
+    "description": "Interactive pool/billiards shot visualization tool with cut angle calculations and shooter's eye view",
+    "ai_description": "Step into the ultimate pool player's perspective with real‑time cut‑angle visualizations that pop like a perfect break. 🎱 Dive in and master every shot instantly!",
+    "category": "Interactive",
+    "tags": [
+      "pool",
+      "billiards",
+      "visualization",
+      "diagrams"
+    ],
+    "source": "github",
+    "source_type": "interactive",
+    "score": 81,
+    "screenshot_path": "screenshots/kevinelong-github-io.webp",
+    "why_interesting": "It turns complex geometry into an intuitive, visual playground for players of any skill.",
+    "discovered_at": "2026-10-21T17:29:00.975227+00:00",
+    "published_at": "2026-10-21T17:29:00.975227+00:00"
+  },
+  {
+    "id": "b25fb0e7-01e8-41d1-aff1-5b9ad365cf89",
+    "url": "https://xuyw041006-arch.github.io/valorant-detect/",
+    "canonical_url": "https://xuyw041006-arch.github.io/valorant-detect",
+    "domain": "xuyw041006-arch.github.io",
+    "title": "Valorant Detect",
+    "clean_title": "Valorant Detect",
+    "raw_title": "valorant-detect",
+    "description": "Video-based VALORANT object tracking, HUD recognition and structured events, with an English/Chinese interactive demo.",
+    "ai_description": "Watch as AI tracks every bullet, agent, and HUD element in real-time VALORANT gameplay. Dive into the interactive demo and see how machine learning decodes the chaos of competitive matches. ",
+    "category": "AI & ML",
+    "tags": [
+      "valorant",
+      "object-tracking",
+      "hud-recognition",
+      "machine-learning"
+    ],
+    "source": "github",
+    "source_type": "interactive",
+    "score": 77,
+    "screenshot_path": "screenshots/xuyw041006-arch-github-io.webp",
+    "why_interesting": "It turns a fast-paced esports title into a live data stream, revealing the hidden structure behind the action.",
+    "discovered_at": "2026-10-21T17:29:08.287445+00:00",
+    "published_at": "2026-10-21T17:29:08.287445+00:00"
   }
 ]
