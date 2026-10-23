@@ -929,5 +929,49 @@
     "why_interesting": "It turns a fast-paced esports title into a live data stream, revealing the hidden structure behind the action.",
     "discovered_at": "2026-10-21T17:29:08.287445+00:00",
     "published_at": "2026-10-21T17:29:08.287445+00:00"
+  },
+  {
+    "id": "dcbbfa18-5b25-4955-a607-4d32cd44643a",
+    "url": "https://uberblok.storagebits.workers.dev/",
+    "canonical_url": "https://uberblok.storagebits.workers.dev",
+    "domain": "workers.dev",
+    "title": "Uberblok",
+    "clean_title": "Uberblok",
+    "raw_title": "Show HN: Uberblok – an interactive museum of ZFS internals",
+    "description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "category": "Interactive",
+    "tags": [
+      "Interactive"
+    ],
+    "source": "hackernews",
+    "source_type": "show_hn",
+    "score": 81,
+    "screenshot_path": "screenshots/uberblok-storagebits-workers-dev.webp",
+    "why_interesting": "Curated for your interest",
+    "discovered_at": "2026-10-23T17:33:58.064617+00:00",
+    "published_at": "2026-10-23T17:33:58.064617+00:00"
+  },
+  {
+    "id": "6e5e3722-80bc-4593-918f-3c2210e1dc3a",
+    "url": "https://codeandcake.dev/posts/2026-10-22-docker-is-weird",
+    "canonical_url": "https://codeandcake.dev/posts/2026-10-22-docker-is-weird",
+    "domain": "codeandcake.dev",
+    "title": "Docker is weird",
+    "clean_title": "Docker is weird",
+    "raw_title": "Docker is weird",
+    "description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "category": "Weird",
+    "tags": [
+      "Weird"
+    ],
+    "source": "hackernews",
+    "source_type": "best",
+    "score": 73,
+    "screenshot_path": "screenshots/codeandcake-dev.webp",
+    "why_interesting": "Curated for your interest",
+    "discovered_at": "2026-10-23T17:34:24.446267+00:00",
+    "published_at": "2026-10-23T17:34:24.446267+00:00"
   }
 ]

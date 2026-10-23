@@ -148,5 +148,15 @@
     "details": {
       "phase": "collection"
     }
+  },
+  {
+    "url": "source://github",
+    "source": "github",
+    "error": "Rate limit exhausted. Try again in 22s.",
+    "error_type": "unknown",
+    "timestamp": "2026-10-23T17:32:59.730077+00:00",
+    "details": {
+      "phase": "collection"
+    }
   }
 ]
