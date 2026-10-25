@@ -158,5 +158,35 @@
     "details": {
       "phase": "collection"
     }
+  },
+  {
+    "url": "source://github",
+    "source": "github",
+    "error": "Rate limit exhausted. Try again in 21s.",
+    "error_type": "unknown",
+    "timestamp": "2026-10-25T16:45:00.492740+00:00",
+    "details": {
+      "phase": "collection"
+    }
+  },
+  {
+    "url": "https://www.pressreader.com/korea-republic/the-korea-times/20170516/282041917057345",
+    "source": "wikipedia",
+    "error": "Site returned HTTP 403: https://www.pressreader.com/korea-republic/the-korea-times/20170516/282041917057345",
+    "error_type": "permanent",
+    "timestamp": "2026-10-25T16:45:32.883505+00:00",
+    "details": {
+      "phase": "enrich_and_publish"
+    }
+  },
+  {
+    "url": "http://isplus.live.joins.com/news/article/article.asp?total_id=23000128&cloc=",
+    "source": "wikipedia",
+    "error": "Site returned HTTP 404: http://isplus.live.joins.com/news/article/article.asp?total_id=23000128&cloc=",
+    "error_type": "permanent",
+    "timestamp": "2026-10-25T16:46:05.907323+00:00",
+    "details": {
+      "phase": "enrich_and_publish"
+    }
   }
 ]

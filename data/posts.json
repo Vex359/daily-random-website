@@ -973,5 +973,51 @@
     "why_interesting": "Curated for your interest",
     "discovered_at": "2026-10-23T17:34:24.446267+00:00",
     "published_at": "2026-10-23T17:34:24.446267+00:00"
+  },
+  {
+    "id": "a2510c10-9c56-42de-a253-77525ab7c253",
+    "url": "https://entertain.naver.com/read?oid=609&aid=0000009291",
+    "canonical_url": "https://entertain.naver.com/read",
+    "domain": "naver.com",
+    "title": "My Strange Hero",
+    "clean_title": "My Strange Hero",
+    "raw_title": "My Strange Hero",
+    "description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "category": "Weird",
+    "tags": [
+      "Weird",
+      "AI"
+    ],
+    "source": "wikipedia",
+    "source_type": "",
+    "score": 73,
+    "screenshot_path": "screenshots/entertain-naver-com.webp",
+    "why_interesting": "Curated for your interest",
+    "discovered_at": "2026-10-25T16:46:04.705672+00:00",
+    "published_at": "2026-10-25T16:46:04.705672+00:00"
+  },
+  {
+    "id": "74123786-83aa-4331-adff-18642c5c7504",
+    "url": "http://www.viva100.com/main/view.php?key=20180927010009313",
+    "canonical_url": "https://viva100.com/main/view.php",
+    "domain": "viva100.com",
+    "title": "My Strange Hero",
+    "clean_title": "My Strange Hero",
+    "raw_title": "My Strange Hero",
+    "description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "category": "Weird",
+    "tags": [
+      "Weird",
+      "AI"
+    ],
+    "source": "wikipedia",
+    "source_type": "",
+    "score": 73,
+    "screenshot_path": "screenshots/viva100-com.webp",
+    "why_interesting": "Curated for your interest",
+    "discovered_at": "2026-10-25T16:46:26.009861+00:00",
+    "published_at": "2026-10-25T16:46:26.009861+00:00"
   }
 ]
