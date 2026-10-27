@@ -1019,5 +1019,52 @@
     "why_interesting": "Curated for your interest",
     "discovered_at": "2026-10-25T16:46:26.009861+00:00",
     "published_at": "2026-10-25T16:46:26.009861+00:00"
+  },
+  {
+    "id": "cd77c257-fedc-4eb7-9942-5ce7d2099ec0",
+    "url": "https://lwn.net/SubscriberLink/1102102/0c00e4d550f25f8c/",
+    "canonical_url": "https://lwn.net/subscriberlink/1102102/0c00e4d550f25f8c",
+    "domain": "lwn.net",
+    "title": "Python's experimental JIT to",
+    "clean_title": "Python's experimental JIT to",
+    "raw_title": "Python's experimental JIT to be removed",
+    "description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "category": "Weird",
+    "tags": [
+      "Weird"
+    ],
+    "source": "hackernews",
+    "source_type": "best",
+    "score": 85,
+    "screenshot_path": "screenshots/lwn-net.webp",
+    "why_interesting": "Curated for your interest",
+    "discovered_at": "2026-10-27T18:11:26.423885+00:00",
+    "published_at": "2026-10-27T18:11:26.423885+00:00"
+  },
+  {
+    "id": "53d7148b-0a10-4798-b66e-229ea0b56562",
+    "url": "https://exywuu.github.io/20Feu/",
+    "canonical_url": "https://exywuu.github.io/20feu",
+    "domain": "exywuu.github.io",
+    "title": "20Feu",
+    "clean_title": "20Feu",
+    "raw_title": "20Feu",
+    "description": "hellfest music-festival creative-coding interactive-experience immersive-web prototype fictional unofficial vanilla-javascript canvas-animation webaudio generative-art accessibility responsive-design scroll-storytelling ai-generated",
+    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "category": "Interactive",
+    "tags": [
+      "Interactive",
+      "AI",
+      "Design",
+      "Music"
+    ],
+    "source": "github",
+    "source_type": "creative_coding",
+    "score": 81,
+    "screenshot_path": "screenshots/exywuu-github-io.webp",
+    "why_interesting": "Curated for your interest",
+    "discovered_at": "2026-10-27T18:11:32.168435+00:00",
+    "published_at": "2026-10-27T18:11:32.168435+00:00"
   }
 ]
