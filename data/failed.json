@@ -188,5 +188,25 @@
     "details": {
       "phase": "enrich_and_publish"
     }
+  },
+  {
+    "url": "source://github",
+    "source": "github",
+    "error": "Rate limit exhausted. Try again in 23s.",
+    "error_type": "unknown",
+    "timestamp": "2026-10-29T18:37:23.537047+00:00",
+    "details": {
+      "phase": "collection"
+    }
+  },
+  {
+    "url": "https://slidebyside.com/",
+    "source": "hackernews",
+    "error": "Site returned HTTP 403: https://slidebyside.com/",
+    "error_type": "permanent",
+    "timestamp": "2026-10-29T18:38:00.284200+00:00",
+    "details": {
+      "phase": "enrich_and_publish"
+    }
   }
 ]

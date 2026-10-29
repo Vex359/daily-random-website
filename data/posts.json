@@ -1066,5 +1066,49 @@
     "why_interesting": "Curated for your interest",
     "discovered_at": "2026-10-27T18:11:32.168435+00:00",
     "published_at": "2026-10-27T18:11:32.168435+00:00"
+  },
+  {
+    "id": "789abe75-0024-48d4-a16f-d6b2334b120d",
+    "url": "https://witnessory.org",
+    "canonical_url": "https://witnessory.org",
+    "domain": "witnessory.org",
+    "title": "Witnessory",
+    "clean_title": "Witnessory",
+    "raw_title": "Show HN: Witnessory – a signed record of the web's move to post-quantum crypto",
+    "description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "category": "Tools",
+    "tags": [
+      "Tools"
+    ],
+    "source": "hackernews",
+    "source_type": "show_hn",
+    "score": 69,
+    "screenshot_path": "screenshots/witnessory-org.webp",
+    "why_interesting": "Curated for your interest",
+    "discovered_at": "2026-10-29T18:38:00.185146+00:00",
+    "published_at": "2026-10-29T18:38:00.185146+00:00"
+  },
+  {
+    "id": "9987d4ec-c6f7-4f5f-94a5-c740cbcdb1c7",
+    "url": "https://yavashark.dev/blog/announcing-yavashark/",
+    "canonical_url": "https://yavashark.dev/blog/announcing-yavashark",
+    "domain": "yavashark.dev",
+    "title": "Yavashark",
+    "clean_title": "Yavashark",
+    "raw_title": "Show HN: Yavashark: I've Built a JavaScript Engine Every Day for 950 Days",
+    "description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "category": "Tools",
+    "tags": [
+      "Tools"
+    ],
+    "source": "hackernews",
+    "source_type": "show_hn",
+    "score": 69,
+    "screenshot_path": "screenshots/yavashark-dev.webp",
+    "why_interesting": "Curated for your interest",
+    "discovered_at": "2026-10-29T18:38:03.906133+00:00",
+    "published_at": "2026-10-29T18:38:03.906133+00:00"
   }
 ]
