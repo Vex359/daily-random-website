@@ -1110,5 +1110,51 @@
     "why_interesting": "Curated for your interest",
     "discovered_at": "2026-10-29T18:38:03.906133+00:00",
     "published_at": "2026-10-29T18:38:03.906133+00:00"
+  },
+  {
+    "id": "32cec0a0-a131-4146-a46b-7698f453d233",
+    "url": "https://colorful-climate.vercel.app",
+    "canonical_url": "https://colorful-climate.vercel.app",
+    "domain": "colorful-climate.vercel.app",
+    "title": "Our_Curious_Climate",
+    "clean_title": "Our_Curious_Climate",
+    "raw_title": "Our_Curious_Climate",
+    "description": "Interactive and vibrant weather file visualizer tool",
+    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "category": "Interactive",
+    "tags": [
+      "Interactive"
+    ],
+    "source": "github",
+    "source_type": "interactive",
+    "score": 81,
+    "screenshot_path": "screenshots/colorful-climate-vercel-app.webp",
+    "why_interesting": "Curated for your interest",
+    "discovered_at": "2026-10-31T17:21:19.143586+00:00",
+    "published_at": "2026-10-31T17:21:19.143586+00:00"
+  },
+  {
+    "id": "cc9380b1-ac65-4d0c-a0f0-236e95a70b13",
+    "url": "https://assetfurnace.com",
+    "canonical_url": "https://assetfurnace.com",
+    "domain": "assetfurnace.com",
+    "title": "image-to-3dlab",
+    "clean_title": "image-to-3dlab",
+    "raw_title": "image-to-3dlab",
+    "description": "AssetFurnace: the most complete open-source image-to-3D pipeline (Oct 2026). Prompt or picture → textured, rigged, animated game character, locally on Apple Silicon or NVIDIA. Pixal3D, TRELLIS.2, Hunyuan3D, SF3D, auto-rig and 21 moves. For indie game devs and 3D artists. Free, Apache-2.0.",
+    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "category": "Interactive",
+    "tags": [
+      "Interactive",
+      "3D",
+      "Game"
+    ],
+    "source": "github",
+    "source_type": "web_experiment",
+    "score": 81,
+    "screenshot_path": "screenshots/assetfurnace-com.webp",
+    "why_interesting": "Curated for your interest",
+    "discovered_at": "2026-10-31T17:21:33.173362+00:00",
+    "published_at": "2026-10-31T17:21:33.173362+00:00"
   }
 ]
