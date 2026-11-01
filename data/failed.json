@@ -218,5 +218,15 @@
     "details": {
       "phase": "enrich_and_publish"
     }
+  },
+  {
+    "url": "https://tng.episodle.com/",
+    "source": "hackernews",
+    "error": "Site returned HTTP 403: https://tng.episodle.com/",
+    "error_type": "permanent",
+    "timestamp": "2026-11-01T18:03:26.595971+00:00",
+    "details": {
+      "phase": "enrich_and_publish"
+    }
   }
 ]
