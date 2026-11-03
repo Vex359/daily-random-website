@@ -1,5 +1,50 @@
 [
   {
+    "id": "16c4778a-f866-4f29-93ec-03930c2405ad",
+    "url": "https://p.migdal.pl/warsaw-vibe-voxel/",
+    "canonical_url": "https://p.migdal.pl/warsaw-vibe-voxel",
+    "domain": "migdal.pl",
+    "title": "Warsaw in voxels",
+    "clean_title": "Warsaw in voxels",
+    "raw_title": "Show HN: Warsaw in voxels – An interactive 3D map of the city centre",
+    "description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "category": "Interactive",
+    "tags": [
+      "Interactive",
+      "3D"
+    ],
+    "source": "hackernews",
+    "source_type": "show_hn",
+    "score": 81,
+    "screenshot_path": "screenshots/p-migdal-pl.webp",
+    "why_interesting": "Curated for your interest",
+    "discovered_at": "2026-11-03T19:44:04.898498+00:00",
+    "published_at": "2026-11-03T19:44:04.898498+00:00"
+  },
+  {
+    "id": "c5b20a7f-1393-454b-856d-fb5e8b609f52",
+    "url": "https://concepts.laxmena.com/",
+    "canonical_url": "https://concepts.laxmena.com",
+    "domain": "laxmena.com",
+    "title": "Interactive notes on RLHF,",
+    "clean_title": "Interactive notes on RLHF,",
+    "raw_title": "Show HN: Interactive notes on RLHF, attention, LoRA and LLM evals",
+    "description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "category": "Interactive",
+    "tags": [
+      "Interactive"
+    ],
+    "source": "hackernews",
+    "source_type": "show_hn",
+    "score": 81,
+    "screenshot_path": "screenshots/concepts-laxmena-com.webp",
+    "why_interesting": "Curated for your interest",
+    "discovered_at": "2026-11-03T19:43:30.662054+00:00",
+    "published_at": "2026-11-03T19:43:30.662054+00:00"
+  },
+  {
     "id": "31322cbc-14e4-435f-9b77-df5c3c580120",
     "url": "https://kiang.github.io/flooding/",
     "canonical_url": "https://kiang.github.io/flooding",
@@ -1103,55 +1148,5 @@
     "why_interesting": "Curated for your interest",
     "discovered_at": "2026-09-15T06:20:18.701891+00:00",
     "published_at": "2026-09-15T06:20:18.701891+00:00"
-  },
-  {
-    "id": "0b6789ad-37ff-495b-8a95-79a1b7049536",
-    "url": "https://apexcharts.com",
-    "canonical_url": "https://apexcharts.com",
-    "domain": "apexcharts.com",
-    "title": "ApexCharts",
-    "clean_title": "ApexCharts",
-    "raw_title": "apexcharts.js",
-    "description": "📊 Interactive JavaScript Charts built on SVG",
-    "ai_description": "Turn data into dazzling, interactive SVG visuals that pop with color and motion. 🌟 Explore live, responsive charts and see your numbers come alive!",
-    "category": "Interactive",
-    "tags": [
-      "javascript",
-      "charts",
-      "svg",
-      "visualization"
-    ],
-    "source": "github",
-    "source_type": "interactive",
-    "score": 81,
-    "screenshot_path": "screenshots/apexcharts-com.webp",
-    "why_interesting": "It lets developers create beautiful, real‑time charts with minimal code, turning raw data into eye‑catching stories.",
-    "discovered_at": "2026-09-15T06:08:35.603869+00:00",
-    "published_at": "2026-09-15T06:08:35.603869+00:00"
-  },
-  {
-    "id": "e3390ec0-8dbd-4b52-8d04-f5ada0500a7d",
-    "url": "https://poltora.dev/redis",
-    "canonical_url": "https://poltora.dev/redis",
-    "domain": "poltora.dev",
-    "title": "Redis City",
-    "clean_title": "Redis City",
-    "raw_title": "Show HN: Redis City – Explore how Redis works in an interactive 3D model",
-    "description": "Redis City turns a powerful database into an explorable 3D world. Walk through how Redis stores, manages, and serves data in real time.",
-    "ai_description": "Redis City turns a powerful database into an explorable 3D world. Walk through how Redis stores, manages, and serves data in real time.",
-    "category": "Interactive",
-    "tags": [
-      "3D",
-      "Redis",
-      "Database",
-      "Visualization"
-    ],
-    "source": "hackernews",
-    "source_type": "show_hn",
-    "score": 81,
-    "screenshot_path": "screenshots/poltora-dev.webp",
-    "why_interesting": "It makes Redis internals intuitive by transforming abstract data structures into an immersive visual experience.",
-    "discovered_at": "2026-09-15T05:14:07.773329+00:00",
-    "published_at": "2026-09-15T05:14:07.773329+00:00"
   }
 ]
