@@ -1,5 +1,50 @@
 [
   {
+    "id": "2abe8bd1-d904-4a19-88b8-cae979875d53",
+    "url": "https://eyadzein.vercel.apphttps://eyadzein.vercel.app",
+    "canonical_url": "https://eyadzein.vercel.apphttps//eyadzein.vercel.app",
+    "domain": "vercel.apphttps",
+    "title": "eyad-portfolio",
+    "clean_title": "eyad-portfolio",
+    "raw_title": "eyad-portfolio",
+    "description": "Interactive single-page portfolio with three switchable modes, animated SVG/CSS skill visualizations and hash-based routing. Built with vanilla HTML, CSS and JavaScript.",
+    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "category": "Interactive",
+    "tags": [
+      "Interactive"
+    ],
+    "source": "github",
+    "source_type": "interactive",
+    "score": 81,
+    "screenshot_path": "screenshots/eyadzein-vercel-apphttps.webp",
+    "why_interesting": "Curated for your interest",
+    "discovered_at": "2026-11-05T20:12:27.051123+00:00",
+    "published_at": "2026-11-05T20:12:27.051123+00:00"
+  },
+  {
+    "id": "7a7aee09-4ac6-4b25-b910-23c1c41ee2b4",
+    "url": "https://mwakidenis.pages.dev/",
+    "canonical_url": "https://mwakidenis.pages.dev",
+    "domain": "mwakidenis.pages.dev",
+    "title": "portfolio_website",
+    "clean_title": "portfolio_website",
+    "raw_title": "portfolio_website",
+    "description": "💼 Portfolio | 🌐 Web & Mobile Projects | 💻 Clean Code | 🎨 UI/UX Design | 🚀 Fast & Interactive | 🌟 Modern Tech | 📫 Connect | 🔗 Live Demos | 🤝 Collaboration | ✨ Enjoy!",
+    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "category": "Interactive",
+    "tags": [
+      "Interactive",
+      "Design"
+    ],
+    "source": "github",
+    "source_type": "interactive",
+    "score": 81,
+    "screenshot_path": "screenshots/mwakidenis-pages-dev.webp",
+    "why_interesting": "Curated for your interest",
+    "discovered_at": "2026-11-05T20:12:20.176403+00:00",
+    "published_at": "2026-11-05T20:12:20.176403+00:00"
+  },
+  {
     "id": "16c4778a-f866-4f29-93ec-03930c2405ad",
     "url": "https://p.migdal.pl/warsaw-vibe-voxel/",
     "canonical_url": "https://p.migdal.pl/warsaw-vibe-voxel",
@@ -1101,52 +1146,5 @@
     "why_interesting": "Curated for your interest",
     "discovered_at": "2026-09-17T15:58:45.982494+00:00",
     "published_at": "2026-09-17T15:58:45.982494+00:00"
-  },
-  {
-    "id": "3ce05d76-5ee5-42e9-b739-012aa500d0b2",
-    "url": "https://polling-frontend-dwg2.onrender.com/?tab=polls",
-    "canonical_url": "https://polling-frontend-dwg2.onrender.com",
-    "domain": "polling-frontend-dwg2.onrender.com",
-    "title": "Polling System",
-    "clean_title": "Polling System",
-    "raw_title": "polling-system-UPDATED-",
-    "description": "An enhanced full-stack real-time voting platform featuring secure user authentication, interactive dashboards, and live results visualization.",
-    "ai_description": "Cast a vote and watch live results pulse across a dashboard in real time. Explore authenticated polls as every click transforms into vivid, up-to-the-second data.",
-    "category": "Interactive",
-    "tags": [
-      "polling",
-      "real-time",
-      "voting",
-      "dashboard"
-    ],
-    "source": "github",
-    "source_type": "interactive",
-    "score": 81,
-    "screenshot_path": "screenshots/polling-frontend-dwg2-onrender-com.webp",
-    "why_interesting": "It turns a simple vote into an instantly visible, interactive data experience.",
-    "discovered_at": "2026-09-15T16:47:39.114344+00:00",
-    "published_at": "2026-09-15T16:47:39.114344+00:00"
-  },
-  {
-    "id": "daa3db7e-0f0b-493d-b82c-084202888e10",
-    "url": "https://gally.net/temp/20260914pelican-alternatives/index.html",
-    "canonical_url": "https://gally.net/temp/20260914pelican-alternatives",
-    "domain": "gally.net",
-    "title": "Pelican-bicycle alternatives",
-    "clean_title": "Pelican-bicycle alternatives",
-    "raw_title": "Show HN: Pelican-bicycle alternatives",
-    "description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
-    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
-    "category": "Tools",
-    "tags": [
-      "Tools"
-    ],
-    "source": "hackernews",
-    "source_type": "show_hn",
-    "score": 69,
-    "screenshot_path": "screenshots/gally-net.webp",
-    "why_interesting": "Curated for your interest",
-    "discovered_at": "2026-09-15T06:20:18.701891+00:00",
-    "published_at": "2026-09-15T06:20:18.701891+00:00"
   }
 ]
