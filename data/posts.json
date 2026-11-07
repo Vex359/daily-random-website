@@ -1,5 +1,51 @@
 [
   {
+    "id": "bfe87b15-5b1e-43c0-b274-22b4d79bf8f2",
+    "url": "https://kalyan-s-portfolio.vercel.app",
+    "canonical_url": "https://kalyan-s-portfolio.vercel.app",
+    "domain": "kalyan-s-portfolio.vercel.app",
+    "title": "kalyan-s-portfolio",
+    "clean_title": "kalyan-s-portfolio",
+    "raw_title": "kalyan-s-portfolio",
+    "description": "💼 Interactive professional portfolio website showcasing full-stack applications, interactive demos, and AI integrations.",
+    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "category": "Interactive",
+    "tags": [
+      "Interactive",
+      "AI"
+    ],
+    "source": "github",
+    "source_type": "interactive",
+    "score": 77,
+    "screenshot_path": "screenshots/kalyan-s-portfolio-vercel-app.webp",
+    "why_interesting": "Curated for your interest",
+    "discovered_at": "2026-11-07T17:52:20.668530+00:00",
+    "published_at": "2026-11-07T17:52:20.668530+00:00"
+  },
+  {
+    "id": "63a715d2-2efd-41cb-884b-538cd0db1d8b",
+    "url": "https://crisdisclafani.github.io/gulf-aquaculture-experience/",
+    "canonical_url": "https://crisdisclafani.github.io/gulf-aquaculture-experience",
+    "domain": "crisdisclafani.github.io",
+    "title": "gulf-aquaculture-experience",
+    "clean_title": "gulf-aquaculture-experience",
+    "raw_title": "gulf-aquaculture-experience",
+    "description": "Concept demo: An Interactive Journey from Egg to Harvest — real-time 3D web experience",
+    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "category": "Interactive",
+    "tags": [
+      "Interactive",
+      "3D"
+    ],
+    "source": "github",
+    "source_type": "interactive",
+    "score": 77,
+    "screenshot_path": "screenshots/crisdisclafani-github-io.webp",
+    "why_interesting": "Curated for your interest",
+    "discovered_at": "2026-11-07T17:52:13.487382+00:00",
+    "published_at": "2026-11-07T17:52:13.487382+00:00"
+  },
+  {
     "id": "2abe8bd1-d904-4a19-88b8-cae979875d53",
     "url": "https://eyadzein.vercel.apphttps://eyadzein.vercel.app",
     "canonical_url": "https://eyadzein.vercel.apphttps//eyadzein.vercel.app",
@@ -1096,55 +1142,5 @@
     "why_interesting": "Curated for your interest",
     "discovered_at": "2026-09-19T16:02:07.306832+00:00",
     "published_at": "2026-09-19T16:02:07.306832+00:00"
-  },
-  {
-    "id": "0c91e4e5-fda2-4dcb-b10c-c92c1bd77724",
-    "url": "https://patchies.app",
-    "canonical_url": "https://patchies.app",
-    "domain": "patchies.app",
-    "title": "patchies",
-    "clean_title": "patchies",
-    "raw_title": "patchies",
-    "description": "Write small programs with tools & libraries you know and patch 'em together. Make interactive widgets, visuals, sounds, and play with computation on the web.",
-    "ai_description": "Build tiny programs with the tools and libraries you already know, then snap them together into interactive widgets, visuals, sounds, and playful web experiments. What will you patch together first? 🧩",
-    "category": "Developer Tools",
-    "tags": [
-      "programming",
-      "web apps",
-      "interactive widgets",
-      "creative coding"
-    ],
-    "source": "github",
-    "source_type": "web_experiment",
-    "score": 81,
-    "screenshot_path": "screenshots/patchies-app.webp",
-    "why_interesting": "It turns coding into a tactile, modular playground where simple pieces become living web creations.",
-    "discovered_at": "2026-09-17T15:58:58.491653+00:00",
-    "published_at": "2026-09-17T15:58:58.491653+00:00"
-  },
-  {
-    "id": "80cb03a3-2877-469e-a2f0-10815876b108",
-    "url": "https://inflightsimulator.com",
-    "canonical_url": "https://inflightsimulator.com",
-    "domain": "inflightsimulator.com",
-    "title": "Inflight Simulator",
-    "clean_title": "Inflight Simulator",
-    "raw_title": "Show HN: I made a flight simulator, except you're just a passenger",
-    "description": "A browser flight simulator where you sit back as a passenger. Watch clouds drift by, explore flight routes, and soak in the soothing cabin atmosphere.",
-    "ai_description": "Kick back in the passenger cabin of a virtual airplane as you soar above the clouds. Pick an origin and destination to gaze out the window and enjoy a wonderfully calm flight experience. ✈️☁️",
-    "category": "Interactive",
-    "tags": [
-      "Flight Simulator",
-      "Interactive",
-      "3D",
-      "Relaxation"
-    ],
-    "source": "hackernews",
-    "source_type": "show_hn",
-    "score": 81,
-    "screenshot_path": "screenshots/inflightsimulator-com.webp",
-    "why_interesting": "Curated for your interest",
-    "discovered_at": "2026-09-17T15:58:45.982494+00:00",
-    "published_at": "2026-09-17T15:58:45.982494+00:00"
   }
 ]
