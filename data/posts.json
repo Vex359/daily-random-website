@@ -1,5 +1,52 @@
 [
   {
+    "id": "9cddf72f-4b54-4120-81b7-fb26f2417c79",
+    "url": "https://developer.mozilla.org/de/",
+    "canonical_url": "https://developer.mozilla.org/de",
+    "domain": "mozilla.org",
+    "title": "translated-content-de",
+    "clean_title": "translated-content-de",
+    "raw_title": "translated-content-de",
+    "description": "Experimental German locale for MDN, aimed at German-speaking users that prefer to read MDN Web Docs in their native language",
+    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "category": "Interactive",
+    "tags": [
+      "Interactive",
+      "AI",
+      "Dev Tools"
+    ],
+    "source": "github",
+    "source_type": "web_experiment",
+    "score": 77,
+    "screenshot_path": "screenshots/developer-mozilla-org.webp",
+    "why_interesting": "Curated for your interest",
+    "discovered_at": "2026-11-09T22:37:53.129353+00:00",
+    "published_at": "2026-11-09T22:37:53.129353+00:00"
+  },
+  {
+    "id": "3d13d0b9-5035-46f7-bf0a-ec1ddab0750e",
+    "url": "https://grand-theft-coconut-creek.vercel.app",
+    "canonical_url": "https://grand-theft-coconut-creek.vercel.app",
+    "domain": "grand-theft-coconut-creek.vercel.app",
+    "title": "Indie-Games",
+    "clean_title": "Indie-Games",
+    "raw_title": "Indie-Games",
+    "description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "category": "Interactive",
+    "tags": [
+      "Interactive",
+      "Game"
+    ],
+    "source": "github",
+    "source_type": "web_experiment",
+    "score": 77,
+    "screenshot_path": "screenshots/grand-theft-coconut-creek-vercel-app.webp",
+    "why_interesting": "Curated for your interest",
+    "discovered_at": "2026-11-09T22:37:44.205622+00:00",
+    "published_at": "2026-11-09T22:37:44.205622+00:00"
+  },
+  {
     "id": "bfe87b15-5b1e-43c0-b274-22b4d79bf8f2",
     "url": "https://kalyan-s-portfolio.vercel.app",
     "canonical_url": "https://kalyan-s-portfolio.vercel.app",
@@ -1097,50 +1144,5 @@
     "why_interesting": "It turns compact neural networks into competitive strategy-game players, making machine learning feel like a live arena.",
     "discovered_at": "2026-09-21T18:18:37.364038+00:00",
     "published_at": "2026-09-21T18:18:37.364038+00:00"
-  },
-  {
-    "id": "2218ba08-b09f-49d9-9fb6-9e0201cedf23",
-    "url": "https://cactuscompute.com/needle",
-    "canonical_url": "https://cactuscompute.com/needle",
-    "domain": "cactuscompute.com",
-    "title": "Cactus Needle 3: 8-29MB",
-    "clean_title": "Cactus Needle 3: 8-29MB",
-    "raw_title": "Show HN: Cactus Needle 3: 8-29MB automation models can match DeepSeek V4 Flash",
-    "description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
-    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
-    "category": "Tools",
-    "tags": [
-      "Tools"
-    ],
-    "source": "hackernews",
-    "source_type": "show_hn",
-    "score": 69,
-    "screenshot_path": "screenshots/cactuscompute-com.webp",
-    "why_interesting": "Curated for your interest",
-    "discovered_at": "2026-09-19T16:02:17.624686+00:00",
-    "published_at": "2026-09-19T16:02:17.624686+00:00"
-  },
-  {
-    "id": "17ffdfc2-c7aa-4a8c-b497-dc0f6f627eb0",
-    "url": "https://mysetup.ai/",
-    "canonical_url": "https://mysetup.ai",
-    "domain": "mysetup.ai",
-    "title": "Share your AI Setup,",
-    "clean_title": "Share your AI Setup,",
-    "raw_title": "Show HN: Share your AI Setup, Learn from others",
-    "description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
-    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
-    "category": "Educational",
-    "tags": [
-      "Educational",
-      "AI"
-    ],
-    "source": "hackernews",
-    "source_type": "show_hn",
-    "score": 73,
-    "screenshot_path": "screenshots/mysetup-ai.webp",
-    "why_interesting": "Curated for your interest",
-    "discovered_at": "2026-09-19T16:02:07.306832+00:00",
-    "published_at": "2026-09-19T16:02:07.306832+00:00"
   }
 ]
