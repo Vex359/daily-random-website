@@ -1,5 +1,53 @@
 [
   {
+    "id": "752fa1f2-e5d2-4ab6-91b4-f9662e19c1fe",
+    "url": "https://bugfishtm.github.io/ai-everything/",
+    "canonical_url": "https://bugfishtm.github.io/ai-everything",
+    "domain": "bugfishtm.github.io",
+    "title": "ai-everything",
+    "clean_title": "ai-everything",
+    "raw_title": "ai-everything",
+    "description": "Everything Studio is a self-hosted creative workspace in one Docker container. People log in, pick what they want to make — a song, a picture, a 3D model, a video, a browser game, an Android app, a Windows program, a web app or a WordPress site — and an AI coding agent builds it in a project of its own, with their own AI account.",
+    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "category": "Interactive",
+    "tags": [
+      "Interactive",
+      "3D",
+      "AI",
+      "Game"
+    ],
+    "source": "github",
+    "source_type": "creative_coding",
+    "score": 81,
+    "screenshot_path": "screenshots/bugfishtm-github-io.webp",
+    "why_interesting": "Curated for your interest",
+    "discovered_at": "2026-11-11T19:48:31.214016+00:00",
+    "published_at": "2026-11-11T19:48:31.214016+00:00"
+  },
+  {
+    "id": "6a946262-1ed3-4716-991d-d17ac41d8d30",
+    "url": "http://neuralmasteryai.com/",
+    "canonical_url": "https://neuralmasteryai.com",
+    "domain": "neuralmasteryai.com",
+    "title": "neuralmasteryai",
+    "clean_title": "neuralmasteryai",
+    "raw_title": "neuralmasteryai",
+    "description": "Neural Mastery — learn AI/ML through real interactive visualizations, then practice with a real in-browser coding workspace. 65+ hands-on problems, 270+ learning pages, from CS/math fundamentals through LLMs and agents.",
+    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "category": "Interactive",
+    "tags": [
+      "Interactive",
+      "AI"
+    ],
+    "source": "github",
+    "source_type": "interactive",
+    "score": 85,
+    "screenshot_path": "screenshots/neuralmasteryai-com.webp",
+    "why_interesting": "Curated for your interest",
+    "discovered_at": "2026-11-11T19:48:25.338627+00:00",
+    "published_at": "2026-11-11T19:48:25.338627+00:00"
+  },
+  {
     "id": "9cddf72f-4b54-4120-81b7-fb26f2417c79",
     "url": "https://developer.mozilla.org/de/",
     "canonical_url": "https://developer.mozilla.org/de",
@@ -1097,52 +1145,5 @@
     "why_interesting": "Curated for your interest",
     "discovered_at": "2026-09-23T17:21:59.079354+00:00",
     "published_at": "2026-09-23T17:21:59.079354+00:00"
-  },
-  {
-    "id": "64fec44e-dd75-4e5e-89f5-fa21d4c9b86e",
-    "url": "https://radius.to/",
-    "canonical_url": "https://radius.to",
-    "domain": "radius.to",
-    "title": "Radius",
-    "clean_title": "Radius",
-    "raw_title": "Show HN: Radius – A Meetup.com Alternative",
-    "description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
-    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
-    "category": "Tools",
-    "tags": [
-      "Tools"
-    ],
-    "source": "hackernews",
-    "source_type": "show_hn",
-    "score": 69,
-    "screenshot_path": "screenshots/radius-to.webp",
-    "why_interesting": "Curated for your interest",
-    "discovered_at": "2026-09-21T18:18:47.511943+00:00",
-    "published_at": "2026-09-21T18:18:47.511943+00:00"
-  },
-  {
-    "id": "f7db9b7a-858a-4bbe-b0cf-4f9601604839",
-    "url": "https://tinybrains.dev",
-    "canonical_url": "https://tinybrains.dev",
-    "domain": "tinybrains.dev",
-    "title": "TinyBrains",
-    "clean_title": "TinyBrains",
-    "raw_title": "Show HN: A competition for small neural networks that play strategy games",
-    "description": "Watch tiny neural networks battle it out in strategy games, where every clever move is earned through code and training. See which small brain can outthink the rest—and cheer on the next champion. 🧠",
-    "ai_description": "Watch tiny neural networks battle it out in strategy games, where every clever move is earned through code and training. See which small brain can outthink the rest—and cheer on the next champion. 🧠",
-    "category": "AI & ML",
-    "tags": [
-      "ai",
-      "neural networks",
-      "strategy games",
-      "competition"
-    ],
-    "source": "hackernews",
-    "source_type": "show_hn",
-    "score": 81,
-    "screenshot_path": "screenshots/tinybrains-dev.webp",
-    "why_interesting": "It turns compact neural networks into competitive strategy-game players, making machine learning feel like a live arena.",
-    "discovered_at": "2026-09-21T18:18:37.364038+00:00",
-    "published_at": "2026-09-21T18:18:37.364038+00:00"
   }
 ]
