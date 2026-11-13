@@ -1,5 +1,54 @@
 [
   {
+    "id": "1ef48d4a-ec8a-4da1-9a04-dff419dc8e56",
+    "url": "https://elryry-web.github.io",
+    "canonical_url": "https://elryry-web.github.io",
+    "domain": "elryry-web.github.io",
+    "title": "elryry-web.github.io",
+    "clean_title": "elryry-web.github.io",
+    "raw_title": "elryry-web.github.io",
+    "description": "One Shot Games: small browser games, designed by me and built with Claude",
+    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "category": "Interactive",
+    "tags": [
+      "Interactive",
+      "Game",
+      "Design"
+    ],
+    "source": "github",
+    "source_type": "web_experiment",
+    "score": 81,
+    "screenshot_path": "screenshots/elryry-web-github-io.webp",
+    "why_interesting": "Curated for your interest",
+    "discovered_at": "2026-11-13T19:57:56.547837+00:00",
+    "published_at": "2026-11-13T19:57:56.547837+00:00"
+  },
+  {
+    "id": "0ed62887-8fc0-4421-a29d-e16e93d8e1f1",
+    "url": "https://woohoo-wonder-labs.lovable.app/",
+    "canonical_url": "https://woohoo-wonder-labs.lovable.app",
+    "domain": "lovable.app",
+    "title": "woohoo-wonder-labs",
+    "clean_title": "woohoo-wonder-labs",
+    "raw_title": "woohoo-wonder-labs",
+    "description": "W.O.O.H.O.O. — Where Only Our Heroes Orbit Outward is an integrated artificial intelligence and scientific computing platform designed to bring machine learning, computational physics, astronomical research, quantum computing, scientific simulations and interactive 3D visualization into one extensible software environment.",
+    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "category": "Interactive",
+    "tags": [
+      "Interactive",
+      "3D",
+      "Design",
+      "Simulation"
+    ],
+    "source": "github",
+    "source_type": "interactive",
+    "score": 85,
+    "screenshot_path": "screenshots/woohoo-wonder-labs-lovable-app.webp",
+    "why_interesting": "Curated for your interest",
+    "discovered_at": "2026-11-13T19:57:51.482289+00:00",
+    "published_at": "2026-11-13T19:57:51.482289+00:00"
+  },
+  {
     "id": "752fa1f2-e5d2-4ab6-91b4-f9662e19c1fe",
     "url": "https://bugfishtm.github.io/ai-everything/",
     "canonical_url": "https://bugfishtm.github.io/ai-everything",
@@ -1097,53 +1146,5 @@
     "why_interesting": "Curated for your interest",
     "discovered_at": "2026-09-25T17:25:42.147436+00:00",
     "published_at": "2026-09-25T17:25:42.147436+00:00"
-  },
-  {
-    "id": "85388aa8-7c1f-4063-b2f8-ab54270728bd",
-    "url": "https://bearclaw-pilot.vercel.app",
-    "canonical_url": "https://bearclaw-pilot.vercel.app",
-    "domain": "bearclaw-pilot.vercel.app",
-    "title": "Bearclaw Pilot",
-    "clean_title": "Bearclaw Pilot",
-    "raw_title": "bearclaw-pilot",
-    "description": "Interactive demo site for BEARCLAW — a benchmark testing whether AI omits animal welfare from civic and legal tasks. Built with React, TypeScript, and Tailwind.",
-    "ai_description": "Run AI through civic and legal scenarios, then watch whether animal welfare slips through the cracks. Test the model, inspect the omissions, and challenge what responsible AI really means.",
-    "category": "Educational",
-    "tags": [
-      "bearclaw",
-      "ai-benchmark",
-      "animal-welfare",
-      "civic-ai"
-    ],
-    "source": "github",
-    "source_type": "interactive",
-    "score": 77,
-    "screenshot_path": "screenshots/bearclaw-pilot-vercel-app.webp",
-    "why_interesting": "It turns an abstract AI ethics issue into a vivid, hands-on benchmark you can explore.",
-    "discovered_at": "2026-09-23T17:22:04.251183+00:00",
-    "published_at": "2026-09-23T17:22:04.251183+00:00"
-  },
-  {
-    "id": "4e84a284-7ac7-41c2-91a4-2e99045e5d40",
-    "url": "https://HaleemaGit.github.io/ehacare-prototype/",
-    "canonical_url": "https://haleemagit.github.io/ehacare-prototype",
-    "domain": "haleemagit.github.io",
-    "title": "ehacare-prototype",
-    "clean_title": "ehacare-prototype",
-    "raw_title": "ehacare-prototype",
-    "description": "EHACare Platform — Interactive Stakeholder Demo (Lafiya · WARIF · MSF · MAMAI)",
-    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
-    "category": "Interactive",
-    "tags": [
-      "Interactive",
-      "AI"
-    ],
-    "source": "github",
-    "source_type": "interactive",
-    "score": 77,
-    "screenshot_path": "screenshots/HaleemaGit-github-io.webp",
-    "why_interesting": "Curated for your interest",
-    "discovered_at": "2026-09-23T17:21:59.079354+00:00",
-    "published_at": "2026-09-23T17:21:59.079354+00:00"
   }
 ]
