@@ -1,5 +1,50 @@
 [
   {
+    "id": "e4c0f867-b3f3-44b5-9f0f-30ccbbd3e3cc",
+    "url": "https://phlppgdfry.github.io/belgium-pulse/",
+    "canonical_url": "https://phlppgdfry.github.io/belgium-pulse",
+    "domain": "phlppgdfry.github.io",
+    "title": "belgium-pulse",
+    "clean_title": "belgium-pulse",
+    "raw_title": "belgium-pulse",
+    "description": "Interactive Belgian city observatory: explainable pressure scoring, what-if scenarios, SQLite persistence and a tested offline demo.",
+    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "category": "Interactive",
+    "tags": [
+      "Interactive",
+      "AI"
+    ],
+    "source": "github",
+    "source_type": "interactive",
+    "score": 77,
+    "screenshot_path": "screenshots/phlppgdfry-github-io.webp",
+    "why_interesting": "Curated for your interest",
+    "discovered_at": "2026-11-15T19:02:55.846296+00:00",
+    "published_at": "2026-11-15T19:02:55.846296+00:00"
+  },
+  {
+    "id": "d2ff9835-494b-4f26-b121-3a7c16fc73b6",
+    "url": "https://tanstack-start-demo-iota.vercel.app",
+    "canonical_url": "https://tanstack-start-demo-iota.vercel.app",
+    "domain": "tanstack-start-demo-iota.vercel.app",
+    "title": "tanstack-start-demo",
+    "clean_title": "tanstack-start-demo",
+    "raw_title": "tanstack-start-demo",
+    "description": "Interactive showcase demo of all features in TanStack Start 1.0 (from Tanner Linsley's stable release announcement)",
+    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "category": "Interactive",
+    "tags": [
+      "Interactive"
+    ],
+    "source": "github",
+    "source_type": "interactive",
+    "score": 81,
+    "screenshot_path": "screenshots/tanstack-start-demo-iota-vercel-app.webp",
+    "why_interesting": "Curated for your interest",
+    "discovered_at": "2026-11-15T19:02:49.963943+00:00",
+    "published_at": "2026-11-15T19:02:49.963943+00:00"
+  },
+  {
     "id": "1ef48d4a-ec8a-4da1-9a04-dff419dc8e56",
     "url": "https://elryry-web.github.io",
     "canonical_url": "https://elryry-web.github.io",
@@ -1102,49 +1147,5 @@
     "why_interesting": "Curated for your interest",
     "discovered_at": "2026-09-27T17:09:16.203022+00:00",
     "published_at": "2026-09-27T17:09:16.203022+00:00"
-  },
-  {
-    "id": "4064e901-bb39-4071-b4be-02c1f675d344",
-    "url": "https://bastardica.mitpit.com",
-    "canonical_url": "https://bastardica.mitpit.com",
-    "domain": "mitpit.com",
-    "title": "Make cursed fonts like",
-    "clean_title": "Make cursed fonts like",
-    "raw_title": "Show HN: Make cursed fonts like Times New Bastard",
-    "description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
-    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
-    "category": "Tools",
-    "tags": [
-      "Tools"
-    ],
-    "source": "hackernews",
-    "source_type": "show_hn",
-    "score": 69,
-    "screenshot_path": "screenshots/bastardica-mitpit-com.webp",
-    "why_interesting": "Curated for your interest",
-    "discovered_at": "2026-09-25T17:25:52.993263+00:00",
-    "published_at": "2026-09-25T17:25:52.993263+00:00"
-  },
-  {
-    "id": "951ab06c-a94e-4e06-990e-dfe712bda68d",
-    "url": "https://s-iguchi09.github.io/apps/wpf-standard-control-demo.html",
-    "canonical_url": "https://s-iguchi09.github.io/apps/wpf-standard-control-demo.html",
-    "domain": "s-iguchi09.github.io",
-    "title": "WPFStandardControlDemoApp",
-    "clean_title": "WPFStandardControlDemoApp",
-    "raw_title": "WPFStandardControlDemoApp",
-    "description": "Interactive demo of standard WPF controls on .NET 10: configuration, visual styles, and runtime behavior.",
-    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
-    "category": "Interactive",
-    "tags": [
-      "Interactive"
-    ],
-    "source": "github",
-    "source_type": "interactive",
-    "score": 81,
-    "screenshot_path": "screenshots/s-iguchi09-github-io.webp",
-    "why_interesting": "Curated for your interest",
-    "discovered_at": "2026-09-25T17:25:42.147436+00:00",
-    "published_at": "2026-09-25T17:25:42.147436+00:00"
   }
 ]
