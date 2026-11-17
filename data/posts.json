@@ -1,5 +1,50 @@
 [
   {
+    "id": "d76cb826-f24e-4072-a723-a42044c8c8dc",
+    "url": "https://pulsecheck-pink.vercel.app",
+    "canonical_url": "https://pulsecheck-pink.vercel.app",
+    "domain": "pulsecheck-pink.vercel.app",
+    "title": "pulsecheck",
+    "clean_title": "pulsecheck",
+    "raw_title": "pulsecheck",
+    "description": "Fingertip camera pulse research prototype with synchronized ECG evaluation and an interactive demo",
+    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "category": "Interactive",
+    "tags": [
+      "Interactive"
+    ],
+    "source": "github",
+    "source_type": "interactive",
+    "score": 77,
+    "screenshot_path": "screenshots/pulsecheck-pink-vercel-app.webp",
+    "why_interesting": "Curated for your interest",
+    "discovered_at": "2026-11-17T21:11:43.412696+00:00",
+    "published_at": "2026-11-17T21:11:43.412696+00:00"
+  },
+  {
+    "id": "5df8f815-c77f-4d58-b31b-42b4df9925ca",
+    "url": "https://guillel51.github.io/Quantum-GammaWave/",
+    "canonical_url": "https://guillel51.github.io/quantum-gammawave",
+    "domain": "guillel51.github.io",
+    "title": "Quantum-GammaWave",
+    "clean_title": "Quantum-GammaWave",
+    "raw_title": "Quantum-GammaWave",
+    "description": "Quantum GammaWave is an enhanced open-source firmware fork of Pocket GammaWave for the M-VAVE FM-1. It expands the original experience with an advanced visual interface, redesigned synthesis engine, expanded sound design capabilities, additional FX and performance tools, custom presets, interactive visualizers, and dedicated browser sections.",
+    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "category": "Interactive",
+    "tags": [
+      "Interactive",
+      "Design"
+    ],
+    "source": "github",
+    "source_type": "interactive",
+    "score": 81,
+    "screenshot_path": "screenshots/guillel51-github-io.webp",
+    "why_interesting": "Curated for your interest",
+    "discovered_at": "2026-11-17T21:11:38.579746+00:00",
+    "published_at": "2026-11-17T21:11:38.579746+00:00"
+  },
+  {
     "id": "e4c0f867-b3f3-44b5-9f0f-30ccbbd3e3cc",
     "url": "https://phlppgdfry.github.io/belgium-pulse/",
     "canonical_url": "https://phlppgdfry.github.io/belgium-pulse",
@@ -1101,51 +1146,5 @@
     "why_interesting": "...",
     "discovered_at": "2026-09-29T18:13:40.194094+00:00",
     "published_at": "2026-09-29T18:13:40.194094+00:00"
-  },
-  {
-    "id": "048040fb-c6a8-4c60-be54-443a61c35042",
-    "url": "https://3d-retro.com/",
-    "canonical_url": "https://3d-retro.com",
-    "domain": "3d-retro.com",
-    "title": "A CC0 museum of",
-    "clean_title": "A CC0 museum of",
-    "raw_title": "Show HN: A CC0 museum of retro 3D tricks you can paste into a page",
-    "description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
-    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
-    "category": "Tools",
-    "tags": [
-      "Tools",
-      "3D"
-    ],
-    "source": "hackernews",
-    "source_type": "show_hn",
-    "score": 69,
-    "screenshot_path": "screenshots/3d-retro-com.webp",
-    "why_interesting": "Curated for your interest",
-    "discovered_at": "2026-09-27T17:09:27.924478+00:00",
-    "published_at": "2026-09-27T17:09:27.924478+00:00"
-  },
-  {
-    "id": "71e22eb9-9938-442e-bcc3-ad98744ae449",
-    "url": "https://tinyaiarena.com/",
-    "canonical_url": "https://tinyaiarena.com",
-    "domain": "tinyaiarena.com",
-    "title": "TinyAIArena",
-    "clean_title": "TinyAIArena",
-    "raw_title": "Show HN: TinyAIArena watch AI agents battle it out",
-    "description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
-    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
-    "category": "Tools",
-    "tags": [
-      "Tools",
-      "AI"
-    ],
-    "source": "hackernews",
-    "source_type": "show_hn",
-    "score": 69,
-    "screenshot_path": "screenshots/tinyaiarena-com.webp",
-    "why_interesting": "Curated for your interest",
-    "discovered_at": "2026-09-27T17:09:16.203022+00:00",
-    "published_at": "2026-09-27T17:09:16.203022+00:00"
   }
 ]
