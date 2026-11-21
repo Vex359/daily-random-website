@@ -1,5 +1,52 @@
 [
   {
+    "id": "522dfbc0-a698-4dff-b183-5e6bc23e889d",
+    "url": "https://twiga-workspace-app.vercel.app",
+    "canonical_url": "https://twiga-workspace-app.vercel.app",
+    "domain": "twiga-workspace-app.vercel.app",
+    "title": "twiga-workspace-app",
+    "clean_title": "twiga-workspace-app",
+    "raw_title": "twiga-workspace-app",
+    "description": "TWIGA live business workspace and interactive product demo",
+    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
+    "category": "Interactive",
+    "tags": [
+      "Interactive"
+    ],
+    "source": "github",
+    "source_type": "interactive",
+    "score": 77,
+    "screenshot_path": "screenshots/twiga-workspace-app-vercel-app.webp",
+    "why_interesting": "Curated for your interest",
+    "discovered_at": "2026-11-21T19:37:28.283507+00:00",
+    "published_at": "2026-11-21T19:37:28.283507+00:00"
+  },
+  {
+    "id": "6179e9f2-b954-4898-8e5e-60d5d6a188bb",
+    "url": "https://outpostracer.com",
+    "canonical_url": "https://outpostracer.com",
+    "domain": "outpostracer.com",
+    "title": "Outpost Racer",
+    "clean_title": "Outpost Racer",
+    "raw_title": "Show HN: I made a PS1 style racing game",
+    "description": "Drift through low-poly desert outposts where every jagged polygon and grainy texture screams pure 1997 nostalgia. Buckle up, hit the gas, and see if you can outrun the sunset. 🏁",
+    "ai_description": "Drift through low-poly desert outposts where every jagged polygon and grainy texture screams pure 1997 nostalgia. Buckle up, hit the gas, and see if you can outrun the sunset. 🏁",
+    "category": "Games",
+    "tags": [
+      "racing",
+      "retro",
+      "ps1",
+      "browser-game"
+    ],
+    "source": "hackernews",
+    "source_type": "show_hn",
+    "score": 81,
+    "screenshot_path": "screenshots/outpostracer-com.webp",
+    "why_interesting": "It faithfully recreates the crunchy low-poly aesthetic and synthwave vibes of PlayStation-era racing games, playable right in your browser.",
+    "discovered_at": "2026-11-21T19:37:23.307872+00:00",
+    "published_at": "2026-11-21T19:37:23.307872+00:00"
+  },
+  {
     "id": "553d2884-280b-4b71-a512-baa41abb6747",
     "url": "https://skills.sh/gokayfem/shader-skills/shader-art-coding",
     "canonical_url": "https://skills.sh/gokayfem/shader-skills/shader-art-coding",
@@ -1103,50 +1150,5 @@
     "why_interesting": "Curated for your interest",
     "discovered_at": "2026-10-03T16:36:54.658709+00:00",
     "published_at": "2026-10-03T16:36:54.658709+00:00"
-  },
-  {
-    "id": "ef5b05c5-4f43-46f3-b610-8a8ecb5a8b70",
-    "url": "https://dev.tourl",
-    "canonical_url": "https://dev.tourl",
-    "domain": "dev.tourl",
-    "title": "Added more features into",
-    "clean_title": "Added more features into",
-    "raw_title": "Added more features into WispShot.",
-    "description": "<p>I originally started it around screenshots and screen recording, but I’ve been experimenting with what else actually makes sense around the MacBook notch.<br />\nSince my last post, I’ve added:</p>\n\n<ul>\n<li>Shelf</li>\n<li>Claude View</li>\n<li>Calendar</li>\n<li>Clipboard</li>\n<li>Timer</li>\n<li>Mac Status</li>\n<li>Notes</li>\n<li>Screen Time\nThe idea is slowly becoming clearer:\nuse the notch as a small workspace for things you want to check, keep, or access without switching apps.\nStill figu...",
-    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
-    "category": "Interactive",
-    "tags": [
-      "Interactive"
-    ],
-    "source": "rss",
-    "source_type": "webdev",
-    "score": 73,
-    "screenshot_path": "screenshots/dev-tourl.webp",
-    "why_interesting": "Curated for your interest",
-    "discovered_at": "2026-10-01T18:39:26.124814+00:00",
-    "published_at": "2026-10-01T18:39:26.124814+00:00"
-  },
-  {
-    "id": "aa2f29f0-d916-4337-b00a-6eed133ac4d8",
-    "url": "https://dental-scope.com/",
-    "canonical_url": "https://dental-scope.com",
-    "domain": "dental-scope.com",
-    "title": "Dental Scope",
-    "clean_title": "Dental Scope",
-    "raw_title": "Show HN: Dental Scope – Interactive 3D dental anatomy",
-    "description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
-    "ai_description": "Discover something interesting on the internet today. This curated pick stands out from the noise. Check it out!",
-    "category": "Interactive",
-    "tags": [
-      "Interactive",
-      "3D"
-    ],
-    "source": "hackernews",
-    "source_type": "show_hn",
-    "score": 81,
-    "screenshot_path": "screenshots/dental-scope-com.webp",
-    "why_interesting": "Curated for your interest",
-    "discovered_at": "2026-10-01T18:39:21.408441+00:00",
-    "published_at": "2026-10-01T18:39:21.408441+00:00"
   }
 ]
